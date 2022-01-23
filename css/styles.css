@@ -1,4 +1,49 @@
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  src: url(https://fonts.google.com/specimen/Montserrat?query=montse);
+}
+
+/* Global Styles */
+
 body {
-  background: navy;
+  background: #687e8c;
   color: white;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #0a3641;
+  padding: 10px;
+}
+
+nav li {
+  display: flex;
+}
+
+/* Home page */
+
+h1 {
+  font-family: "Montserrat", sans-serif, tahoma;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* footer*/
+
+footer {
+  font-family: "Montserrat", tahoma, sans-serif;
+  background-color: #0a3641;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-us {
+  font-style: italic;
 }
