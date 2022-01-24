@@ -15,24 +15,38 @@ body {
 
 nav {
   background-color: #0a3641;
-  padding: 10px;
 }
 
-.hamburger-menu {
-  display: none;
-}
-
-.hambuger-menu:checked ~ nav {
-  display: block;
+img {
+  width: 100%;
+  margin: auto;
 }
 
 nav li {
   display: none;
 }
 
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: end;
+}
+
 .logo {
   padding: 0;
   margin: 0;
+}
+
+/* Desktop Media */
+
+@media (min-width: 600px) {
 }
 
 /* Home page */
@@ -46,6 +60,11 @@ h1 {
 a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+}
+
+.shopping-cart {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* footer*/
