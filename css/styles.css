@@ -18,8 +18,21 @@ nav {
   padding: 10px;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
+.hambuger-menu:checked ~ nav {
+  display: block;
+}
+
 nav li {
-  display: flex;
+  display: none;
+}
+
+.logo {
+  padding: 0;
+  margin: 0;
 }
 
 /* Home page */
