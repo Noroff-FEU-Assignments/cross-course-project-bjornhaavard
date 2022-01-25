@@ -13,6 +13,7 @@
   </head>
   <body>
     <header>
+      <div class="header-bar">
       <figure class="logo">
         <a href="index.html">
           <img src="images/mobile/logo/Logo mobile.png" alt="rainydays logo" />
@@ -21,19 +22,20 @@
       <input type="checkbox" id="hamburger-menu" />
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <nav>
-        <ul class="nav-menu">
-          <li><a href="#">Search</a></li>
-          <li><a href="Men.html">Men</a></li>
-          <li><a href="women.html">Women</a></li>
-          <li><a href="kids.html">Kids</a></li>
-          <li><a href="contact us">Contact us</a></li>
-        </ul>
-        <ul>
+        <div class="nav-menu">
+          <input type="search" id="search-bar" />
+          <a href="Men.html">Men</a>
+          <a href="women.html">Women</a>
+          <a href="kids.html">Kids</a>
+          <a href="contact us">Contact us</a>
           <figure class="shopping-cart">
             <a href="#">
               <img src="images/mobile/logo/Icon feather-shopping-cart.png" alt="shopping cart" />
             </a>
           </figure>
+        <ul>
+        </div>
+      </div>
         </ul>
       </nav>
     </header>
@@ -63,14 +65,14 @@
       <div>
         <p>Interested in joining us pushing the comfort zone?</p>
         <a href="#">register</a>
-        <ul>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">instagram</a></li>
-          <li><a href="#">youtube</a></li>
+        <nav>
+          <a href="#">facebook</a>
+          <a href="#">instagram</a>
+          <a href="#">youtube</a>
           <div class="contact-us">
-            <li><a href="#">contact us</a></li>
+            <a href="#">contact us</a>
           </div>
-        </ul>
+        </nav>
       </div>
     </footer>
   </body>
