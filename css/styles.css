@@ -24,13 +24,29 @@ body {
   width: 100%;
 }
 
+.welcome {
+  background-image: url(/images/pexels-beytlik-9665436.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  min-height: 50vh;
+  position: relative;
+}
+
+.welcome-text {
+  position: relative;
+  text-align: center;
+  top: 100px;
+  left: 10px;
+}
+
 nav {
   background-color: #687e8c;
   display: none;
-  position: fixed;
+  /* position: fixed; */
   right: 0px;
   top: 0px;
-  height: 100vh;
   border: 2px solid #0a3641;
 }
 
@@ -40,9 +56,11 @@ nav {
   flex-direction: column;
 }
 
-nav li {
+nav > * {
   display: flex;
+  flex-direction: column;
   width: 100%;
+  text-decoration: none;
 }
 
 .header-bar {
@@ -53,6 +71,10 @@ nav li {
 
 main img {
   width: 100%;
+  margin: 0px;
+}
+
+figure {
   margin: 0px;
 }
 
@@ -67,11 +89,13 @@ img a {
 
 #hamburger-menu {
   display: none;
+  align-items: end;
 }
 
 .logo {
   padding: 0;
   margin: 0;
+  align-self: center;
 }
 
 /* Home page */
@@ -82,6 +106,11 @@ h1 {
   font-weight: bold;
 }
 
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
@@ -90,6 +119,7 @@ a {
 .shopping-cart {
   display: flex;
   justify-content: end;
+  align-self: center;
 }
 
 /* footer*/
@@ -126,6 +156,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .nav-media {
@@ -136,24 +167,26 @@ footer {
 
 /* Desktop Media */
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   nav {
+    display: block;
     background-color: #0a3641;
-    display: flex;
     position: relative;
     height: 30px;
   }
 
-  nav::before {
-    background-image: url(//images/pexels-kirill-lazarev-8573474-resized.jpg);
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(3) 1fr;
   }
 
-  nav li {
-    display: inline;
+  nav::before {
+    /* background-image: url(//images/pexels-kirill-lazarev-8573474-resized.jpg); */
   }
 
   .nav-menu {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
   }
@@ -164,6 +197,11 @@ footer {
     background-color: #0a3641;
     margin-top: 20px;
   }
+
+  h1 {
+    font-size: 34px;
+  }
+
   #search-bar {
     margin-left: 50px;
   }
@@ -176,8 +214,16 @@ footer {
     display: inline-block;
   }
 
-  img {
+  main img {
+    display: flex;
     max-width: 1000px;
     margin: 0xp;
+  }
+
+  .welcome-text {
+    position: relative;
+    text-align: center;
+    top: 100px;
+    left: 10px;
   }
 }
