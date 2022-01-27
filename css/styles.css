@@ -55,7 +55,7 @@ nav {
 
 .nav menu {
   display: flex;
-  width: 200px;
+  width: 300px;
   flex-direction: column;
 }
 
@@ -65,15 +65,15 @@ nav > * {
   width: 100%;
   text-decoration-line: none;
   text-align: center;
-  /* margin-top: 10px; */
+  margin-top: 10px;
   gap: 0px;
 }
 
-/* nav a { */
-/* border: solid 1px #0a3641;
+nav a {
+  border: solid 1px #0a3641;
   padding: 10px;
   margin: 0px;
-} */
+}
 
 .header-bar {
   background-color: #0a3641;
@@ -86,6 +86,14 @@ nav > * {
 main img {
   width: 100%;
   margin: 0px;
+}
+
+.picture-name {
+  text-align: center;
+  font-size: 20px;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  position: absolute;
 }
 
 figure {
@@ -126,6 +134,7 @@ h1 {
   max-width: 1000px;
   margin: 50px auto;
   grid-gap: 10px;
+  position: relative;
 }
 
 .products-container img {
@@ -139,7 +148,7 @@ a {
 
 .shopping-cart {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-self: center;
 }
 
@@ -187,6 +196,10 @@ footer {
   margin: 20px 0px 10px 0px;
 }
 
+.about-us {
+  display: none;
+}
+
 /* tablet media */
 
 @media (min-widt: 500px) {
@@ -214,8 +227,16 @@ footer {
     border: none;
   }
 
+  nav > * {
+    margin-top: 0px;
+  }
+
   nav::before {
     /* background-image: url(//images/pexels-kirill-lazarev-8573474-resized.jpg); */
+  }
+
+  .picture-men {
+    position: relative;
   }
 
   .nav-menu {
@@ -256,7 +277,7 @@ footer {
 
   .shopping-cart img {
     display: flex;
-    align-self: flex-nthend;
+    align-self: flex-end;
   }
 
   :nth-child(5) {
@@ -269,10 +290,19 @@ footer {
     margin: 0xp;
   }
 
+  img a {
+    width: 100%;
+    object-fit: fill;
+  }
+
   .welcome-text {
     position: relative;
     text-align: center;
     top: 100px;
     left: 10px;
+  }
+
+  .about-us {
+    display: flex;
   }
 }
