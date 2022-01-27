@@ -225,10 +225,12 @@ footer {
 
   nav a {
     border: none;
+    padding: 0px;
   }
 
   nav > * {
     margin-top: 0px;
+    padding: 0px;
   }
 
   nav::before {
@@ -244,6 +246,12 @@ footer {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
+    width: 1000px;
+  }
+
+  #shopping-cart {
+    display: flex;
+    justify-content: end;
   }
 
   .nav-media {
