@@ -65,6 +65,7 @@ nav {
 
 .icons-nav {
   display: none;
+  gap: 5px;
 }
 
 .nav menu {
@@ -179,7 +180,7 @@ h1 {
 }
 
 a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Tahoma, Segoe UI", Geneva, Verdana, sans-serif;
   color: white;
 }
 
@@ -196,14 +197,13 @@ footer {
   background-color: #0a3641;
   margin: 0 auto;
   text-align: center;
-  /* position: relative; */
 }
 
 .contact-us {
   display: inline-block;
   font-style: italic;
-  margin-bottom: 30px;
-  font-size: 30px;
+  margin-bottom: 10px;
+  font-size: 24px;
   font-weight: 400;
 }
 
@@ -234,7 +234,11 @@ footer {
 }
 
 .about-us {
-  display: none;
+  /* display: none; */
+  display: grid;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding-bottom: 20px;
 }
 
 /* tablet media */
@@ -302,7 +306,7 @@ footer {
   }
 
   .cta-register {
-    border-radius: 0px;
+    border-radius: 10px;
   }
 
   .icons-nav {
@@ -406,7 +410,8 @@ footer {
   }
 
   .picture-name {
-    padding: 10px 45px;
+    padding: 10px 40px;
+    font-size: 1.2rem;
   }
 }
 
@@ -541,7 +546,7 @@ footer {
   .footer-text {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     margin-right: 50px;
   }
