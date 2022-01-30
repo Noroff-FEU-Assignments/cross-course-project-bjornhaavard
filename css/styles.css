@@ -302,16 +302,6 @@ footer {
     gap: 20px;
   }
 
-  footer {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    margin: 0 auto;
-  }
-
-  .cta-register {
-    border-radius: 10px;
-  }
-
   .icons-nav {
     display: flex;
     gap: 20px;
@@ -393,6 +383,19 @@ footer {
 
   .contact-about > * {
     font-size: 1.1rem;
+  }
+
+  /* footer */
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin: 0 auto;
+  }
+
+  .cta-register {
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   .nav-footer {
@@ -477,12 +480,6 @@ footer {
     gap: 20px;
   }
 
-  footer {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    margin: 0 auto;
-  }
-
   .icons-nav {
     display: flex;
     gap: 20px;
@@ -514,10 +511,6 @@ footer {
     display: none;
   }
 
-  .cta-register {
-    border-radius: 10px;
-  }
-
   main img {
     display: flex;
     max-width: 1000px;
@@ -546,6 +539,14 @@ footer {
     font-size: 1.5rem;
   }
 
+  /* Footer */
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin: 0 auto;
+  }
+
   .footer-text {
     display: flex;
     justify-content: center;
@@ -563,6 +564,11 @@ footer {
 
   .contact-about > * {
     font-size: 1.5rem;
+  }
+
+  .cta-register {
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   .nav-footer {
