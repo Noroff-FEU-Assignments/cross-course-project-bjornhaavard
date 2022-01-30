@@ -234,11 +234,14 @@ footer {
 }
 
 .about-us {
-  /* display: none; */
   display: grid;
   font-size: 1.5rem;
   font-style: italic;
   padding-bottom: 20px;
+}
+
+.footer-text {
+  padding-top: 20px;
 }
 
 /* tablet media */
