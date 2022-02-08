@@ -8,12 +8,6 @@
   outline-offset: -1px;
 }
 
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Roboto", sans-serif;
-  src: url(https://fonts.google.com/specimen/Montserrat?query=montse);
-}
-
 /* Global Styles */
 
 body {
@@ -37,9 +31,6 @@ main {
 .active {
   text-decoration: underline;
   font-weight: bold;
-  /* background-color: #e1bd2d; */
-  /* color: #0a3641; */
-  /* border: #fff solid; */
 }
 
 .welcome {
@@ -47,17 +38,17 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: bottom;
+  background-position-y: center;
   min-height: 50vh;
   position: relative;
-  margin-top: -30px;
 }
 
 .welcome-text {
-  position: relative;
+  position: absolute;
   text-align: center;
-  top: 100px;
-  left: 10px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 nav {
@@ -67,7 +58,7 @@ nav {
   z-index: 1000;
   width: 60%;
   right: 0px;
-  top: 83px;
+  top: 86px;
   height: 90vh;
   border: 2px solid #0a3641;
 }
@@ -195,6 +186,11 @@ img a {
 
 #hamburger-menu:checked ~ .icons-nav {
   display: flex;
+  position: absolute;
+  right: 20%;
+  top: 30%;
+  z-index: 1100;
+  gap: 20px;
 }
 
 #hamburger-menu {
@@ -220,7 +216,8 @@ h3 {
   font-size: 34px;
   font-weight: bold;
   text-transform: capitalize;
-  text-shadow: 0 0 5px black;
+  /* text-shadow: 0 0 5px white; */
+  color: black;
 }
 
 a {
@@ -259,7 +256,7 @@ textarea {
 }
 
 .contact {
-  font-family: "Montserrat";
+  font-family: "Montserrat" sans-serif;
   text-align: center;
   font-weight: bold;
   margin: 50px auto;
@@ -378,6 +375,7 @@ footer {
     font-weight: bold;
     justify-content: space-between;
     align-items: flex-end;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.5);
   }
 
   .before figure {
@@ -429,6 +427,8 @@ footer {
 
   #search-bar {
     margin-left: 50px;
+    padding: 5px;
+    margin: 0px;
   }
 
   label {
@@ -452,10 +452,7 @@ footer {
   }
 
   .welcome-text {
-    position: relative;
-    text-align: center;
-    top: 100px;
-    left: 10px;
+    color: #0a3641;
   }
 
   .about-us {
@@ -625,13 +622,13 @@ footer {
     width: 100%;
     object-fit: fill;
   }
-
+  /* 
   .welcome-text {
     position: relative;
     text-align: center;
     top: 100px;
     left: 10px;
-  }
+  } */
 
   .about-us {
     display: grid;
