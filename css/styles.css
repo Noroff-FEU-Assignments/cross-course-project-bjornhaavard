@@ -27,6 +27,7 @@ body {
 
 .before {
   display: none;
+  text-shadow: 0 0 5px black;
 }
 
 main {
@@ -35,6 +36,10 @@ main {
 
 .active {
   text-decoration: underline;
+  font-weight: bold;
+  /* background-color: #e1bd2d; */
+  /* color: #0a3641; */
+  /* border: #fff solid; */
 }
 
 .welcome {
@@ -106,6 +111,7 @@ nav > * {
   text-align: left;
   margin: auto;
   padding-bottom: 30px;
+  text-shadow: 0 0 5px black;
 }
 
 .about-main p::first-letter {
@@ -128,7 +134,7 @@ nav a {
 }
 
 main img {
-  width: 10 0%;
+  width: 100%;
   margin: 0px;
   box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
 }
@@ -153,13 +159,14 @@ main img {
 }
 
 .picture-name:hover {
-  transition: hover; 
+  transition: hover;
   background-color: #fff;
-  color: #0a3641
+  color: #0a3641;
+  transition: all 0.5s ease-out;
 }
 
 @keyframes hover {
-  100% {100%};
+  /* 100% {100%}; */
 }
 
 .picture-name {
@@ -213,6 +220,7 @@ h3 {
   font-size: 34px;
   font-weight: bold;
   text-transform: capitalize;
+  text-shadow: 0 0 5px black;
 }
 
 a {
@@ -224,6 +232,60 @@ a {
   display: flex;
   justify-content: space-between;
   align-self: center;
+}
+
+/* contact page */
+
+form {
+  display: inline-block;
+  max-width: 400px;
+  margin-top: 50px;
+}
+
+#name,
+#email {
+  text-shadow: 0px 0p 5px black;
+}
+
+input,
+textarea {
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px 50px;
+}
+
+textarea {
+  margin-top: 40px;
+}
+
+.contact {
+  font-family: "Montserrat";
+  text-align: center;
+  font-weight: bold;
+  margin: 50px auto;
+}
+
+.contact p {
+  text-shadow: 0px 0px 5px black;
+}
+
+.contact h2 {
+  text-decoration: underline;
+  text-shadow: 0px 0px 5px black;
+}
+
+.cta-submit {
+  display: inline-block;
+  background-color: #e1bd2d;
+  padding: 10px 30px;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  max-width: fit-content;
+  align-items: flex-end;
 }
 
 /* footer*/
@@ -371,6 +433,11 @@ footer {
 
   label {
     display: none;
+  }
+
+  .contact label {
+    display: flex;
+    text-align: center;
   }
 
   main img {
