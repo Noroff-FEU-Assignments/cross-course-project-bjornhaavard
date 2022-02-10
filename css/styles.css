@@ -19,6 +19,10 @@ body {
   margin: 0px;
 }
 
+img {
+  width: 100%;
+}
+
 .before {
   display: none;
   text-shadow: 0 0 5px black;
@@ -34,7 +38,7 @@ main {
 }
 
 .welcome {
-  background-image: url(/images/pexels-beytlik-9665436.jpg);
+  background-image: url(/images/pexels-beytlik-resized.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -46,7 +50,7 @@ main {
 .welcome-text {
   position: absolute;
   text-align: center;
-  top: 40px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -66,11 +70,24 @@ nav {
 .icons-nav {
   display: none;
   gap: 5px;
+  animation: nav-icon;
+  animation-duration: 1.5s;
+}
+
+@keyframes nav-icon {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: 0%;
+  }
+  100% {
+    right: 0%;
+  }
 }
 
 .nav menu {
   display: flex;
-  width: 300px;
   flex-direction: column;
   align-items: flex-end;
 }
@@ -125,7 +142,6 @@ nav a {
 }
 
 main img {
-  width: 100%;
   margin: 0px;
   box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
 }
@@ -143,10 +159,6 @@ main img {
   margin: 50px auto;
   grid-gap: 20px;
   text-align: center;
-}
-
-.products-container img {
-  width: 100%;
 }
 
 .picture-name:hover {
@@ -169,6 +181,7 @@ main img {
   justify-content: center;
   padding: 10px 70px;
   border-radius: 10px;
+  text-transform: capitalize;
 }
 
 figure {
@@ -176,12 +189,25 @@ figure {
 }
 
 img a {
-  width: 100%;
   margin: 0 auto;
 }
 
 #hamburger-menu:checked ~ nav {
   display: block;
+  animation-name: menu;
+  animation-duration: 1.5s;
+}
+
+@keyframes menu {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: 0%;
+  }
+  100% {
+    right: 0%;
+  }
 }
 
 #hamburger-menu:checked ~ .icons-nav {
@@ -253,22 +279,26 @@ textarea {
 
 textarea {
   margin-top: 40px;
+  height: 80%;
+  min-height: 100px;
 }
 
 .contact {
-  font-family: "Montserrat" sans-serif;
   text-align: center;
   font-weight: bold;
   margin: 50px auto;
 }
 
 .contact p {
+  font-family: "Montserrat", Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
   text-shadow: 0px 0px 5px black;
 }
 
 .contact h2 {
+  font-family: "Montserrat", Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
   text-decoration: underline;
   text-shadow: 0px 0px 5px black;
+  text-transform: uppercase;
 }
 
 .cta-submit {
@@ -418,7 +448,6 @@ footer {
   }
 
   .products-container img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     display: flex;
@@ -447,12 +476,12 @@ footer {
   }
 
   img a {
-    width: 100%;
     object-fit: fill;
   }
 
   .welcome-text {
     color: #0a3641;
+    top: 30px;
   }
 
   .about-us {
@@ -619,16 +648,8 @@ footer {
   }
 
   img a {
-    width: 100%;
     object-fit: fill;
   }
-  /* 
-  .welcome-text {
-    position: relative;
-    text-align: center;
-    top: 100px;
-    left: 10px;
-  } */
 
   .about-us {
     display: grid;
