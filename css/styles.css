@@ -243,13 +243,21 @@ label {
 /* Home page */
 
 h1,
+h2,
 h3 {
   font-family: "Montserrat", sans-serif, tahoma;
   font-size: 34px;
   font-weight: bold;
   text-transform: capitalize;
-  /* text-shadow: 0 0 5px white; */
-  color: black;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 0 0 5px black;
+  background-color: #0a3641;
+}
+
+h2 {
+  margin-top: 50px;
 }
 
 a {
@@ -397,16 +405,6 @@ footer {
   nav > * {
     margin-top: 0px;
     padding: 0px;
-  }
-
-  h1,
-  h2 {
-    max-width: 1000px;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 20px;
-    color: #fff;
-    text-shadow: 0 0 5px black;
   }
 
   .before {
