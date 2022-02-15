@@ -68,6 +68,41 @@ main {
   font-size: 1.1rem;
 }
 
+.text-box {
+  background-color: var(--header-color);
+  margin: 20px;
+  padding: 5px;
+  box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.text-box form {
+  display: flex;
+  /* flex-direction: column; */
+  max-width: 1000px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.form-size label {
+  display: inline-block;
+  text-align: right;
+}
+
+.form-color {
+  /* flex-direction: column; */
+}
+
+.text-box form label {
+  display: flex;
+}
+
+#size #color {
+  display: flex;
+  justify-content: center;
+}
+
 .welcome-text {
   position: absolute;
   text-align: center;
@@ -327,11 +362,16 @@ form {
   text-shadow: 0px 0p 5px black;
 }
 
+label {
+  justify-content: center;
+}
+
 input,
 textarea {
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
+  border: none;
 }
 
 textarea {
@@ -525,17 +565,26 @@ footer {
 
   .jacket-container {
     display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
-  .jacket-container > * {
-    flex: 1;
+  .jacket-container1 h1 {
     margin: 20px;
+  }
+
+  .jacket-container1 {
+    flex: 1 58%;
+  }
+
+  .jacket-container2 {
+    flex: 1 42%;
   }
 
   .jacket-img-thumbnail {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 0px;
     flex-direction: column;
   }
 

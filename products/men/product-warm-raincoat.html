@@ -54,17 +54,39 @@
       </div>
     </header>
     <main class="jacket-container">
-      <section>
+      <section class="jacket-container1">
         <figure>
           <img src="/images/men/pexels-andrew-nevins-resize.jpg" alt="man snowboarding in a snowcovered forrest" class="jacket-image" />
         </figure>
-        <h1>warm raincoat</h1>
-        <p>a slightly warmer raincoat</p>
-        <p>for all year use down to -5c</p>
-        <p>299$</p>
-        <a href="#" class="cta-submit">add to cart</a>
+        <div class="text-box">
+          <h1>warm raincoat</h1>
+          <p>a slightly warmer raincoat</p>
+          <p>for all year use down to -5c</p>
+          <p>299$</p>
+          <form method="post">
+            <div class="form-size">
+              <label for="cities">size</label>
+              <select name="size" id="size">
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+                <option value="x-large">x-large</option>
+              </select>
+            </div>
+            <div class="form-color">
+              <label for="color">color</label>
+              <select name="color" id="color">
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="orange">orange</option>
+                <option value="green">green</option>
+              </select>
+            </div>
+          </form>
+          <a href="#" class="cta-submit">add to cart</a>
+        </div>
       </section>
-      <section>
+      <section class="jacket-container2">
         <div class="jacket-img-thumbnail">
           <figure>
             <img src="/images/men/pexels-andrew-resize.jpg" alt="man snowboarding in a snowcovered forrest" class="jacket-image" />
