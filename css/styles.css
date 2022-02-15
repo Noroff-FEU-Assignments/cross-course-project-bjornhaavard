@@ -189,6 +189,27 @@ main img {
   padding: 0 10px 0 10px;
 }
 
+.jacket-specific {
+  flex: 1;
+  flex-direction: column;
+}
+
+.jacket-container {
+  font-family: "Montserrat", tahoma, sans-serif;
+  font-weight: bold;
+  margin: auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.jacket-container figure {
+  margin: 20px;
+}
+
+.jacket-container p::first-letter {
+  text-transform: uppercase;
+}
+
 .picture-name:hover {
   transition: hover;
   background-color: #fff;
@@ -272,6 +293,7 @@ h3 {
   color: #fff;
   background-color: var(--header-color);
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 h2 {
@@ -468,7 +490,7 @@ footer {
   .search {
     margin: 0px;
     padding: 4px;
-    font-family: "Montserrat";
+    font-family: "Montserrat", tahoma, sans-serif;
     font-weight: bold;
     display: inline-block;
     position: absolute;
@@ -499,8 +521,22 @@ footer {
     flex-grow: 1;
   }
 
-  .products-container {
-    grid-template-columns: repeat(3, 1fr);
+  /* Products*/
+
+  .jacket-container {
+    display: flex;
+  }
+
+  .jacket-container > * {
+    flex: 1;
+    margin: 20px;
+  }
+
+  .jacket-img-thumbnail {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
   }
 
   .products-container img {
@@ -611,7 +647,6 @@ footer {
 @media (min-width: 913px) {
   nav {
     display: block;
-    background-color: var(--header-color);
     position: relative;
     height: 30px;
     top: 0px;
