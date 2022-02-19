@@ -77,12 +77,17 @@ main {
   margin-bottom: 5px;
 }
 
+.product-grid {
+  background-color: var(--header-color);
+  box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
 .text-box form {
   display: flex;
-  /* flex-direction: column; */
   max-width: 1000px;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 23px;
 }
 
 .form-size label {
@@ -96,6 +101,7 @@ main {
 
 .text-box form label {
   display: flex;
+  margin-bottom: 15px;
 }
 
 #size #color {
@@ -335,7 +341,6 @@ h2 {
   display: flex;
   justify-content: center;
   font-size: 1.4rem;
-  margin-top: 50px;
 }
 
 a {
@@ -354,7 +359,6 @@ a {
 form {
   display: inline-block;
   max-width: 400px;
-  margin-top: 50px;
 }
 
 #name,
@@ -383,7 +387,7 @@ textarea {
 .contact {
   text-align: center;
   font-weight: bold;
-  margin: 50px auto;
+  margin: 0px auto;
 }
 
 .contact p {
@@ -574,11 +578,11 @@ footer {
   }
 
   .jacket-container1 {
-    flex: 1 58%;
+    flex: 1 56%;
   }
 
   .jacket-container2 {
-    flex: 1 42%;
+    flex: 1 44%;
   }
 
   .jacket-img-thumbnail {
