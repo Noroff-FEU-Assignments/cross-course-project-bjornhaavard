@@ -257,6 +257,7 @@ form {
 
 .jacket-container figure {
   margin: 20px;
+  margin-top: 38px;
 }
 
 .jacket-container p::first-letter {
@@ -769,7 +770,7 @@ footer {
 
   .cart-img-thumbnail {
     display: flex;
-    max-width: 15%;
+    height: 358px;
   }
 
   .shopping-cart-text {
