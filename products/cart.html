@@ -41,7 +41,7 @@
             <img src="/images/Icon-favorite-border.png" alt="favorite" />
           </a>
         </figure>
-        <figure class="shopping-cart">
+        <figure class="cart">
           <a href="#">
             <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
           </a>
@@ -53,7 +53,39 @@
         </figure>
       </div>
     </header>
-    <main></main>
+    <main>
+      <h1>shopping cart</h1>
+      <section class="cart-container">
+        <figure class="cart-img-thumbnail">
+          <img src="/images/men/pexels-andrew-nevins-resize.jpg" alt="man snowboarding in a snowcovered forrest" />
+        </figure>
+      <section class="shopping-cart-text">
+        <div class="text-box-cart">
+          <h2>warm raincoat</h2>
+          <p>a slightly warmer raincoat</p>
+          <p>for all year use down to -5c</p>
+          <p>299$</p>
+          <div class="counter">
+            <div class="button">-</div>
+            <div class="count">1</div>
+            <div class="button">+</div>
+          </div>
+          <form method="post">
+            <label for="color">color</label>
+           <div class="form-color-cart">
+            <select name="color" id="color">
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="orange">orange</option>
+              <option value="green">green</option>
+            </select>
+          </form>
+         <form action="/cta-response/purchase-succesful.html" method="get">
+            <button class="cta-submit">purchase</button>
+        </form>
+      </section>
+    </section>
+    </main>
     <footer>
       <p class="footer-text">Interested in joining us pushing the comfort zone?</p>
       <div class="nav-footer">
