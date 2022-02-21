@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Quality jackets so you can enjoy the outdoors" />
-    <title>RainyDays | Contact</title>
+    <title>RainyDays | Checkout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto&display=swap" rel="stylesheet" />
@@ -30,7 +30,7 @@
             <input type="text" id="search-bar" />
             <i class="fas fa-search"></i>
           </form>
-          <a href="/products/men/men.html" class="men">Men</a>
+          <a href="/products/men/men.html" class="men active">Men</a>
           <a href="/products/women/women.html" class="women">Women</a>
           <a href="/products/kids/kids.html" class="kids">Kids</a>
         </div>
@@ -38,43 +38,57 @@
       <div class="icons-nav">
         <figure class="favorite">
           <a href="#">
-            <img src="images/Icon-favorite-border.png" alt="favorite" />
+            <img src="/images/Icon-favorite-border.png" alt="favorite" />
           </a>
         </figure>
         <figure class="cart">
-          <a href="/products/cart.html">
-            <img src="images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
+          <a href="#">
+            <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
           </a>
         </figure>
         <figure class="person">
           <a href="#">
-            <img src="images/Icon-material-person-outline.png" alt="person" />
+            <img src="/images/Icon-material-person-outline.png" alt="login" />
           </a>
         </figure>
       </div>
     </header>
     <main>
-      <section class="welcome">
-        <div class="welcome-text">
-          <h1>Quality jackets so you can enjoy the outdoors</h1>
+      <h1>checkout</h1>
+      <section class="checkout">
+        <figure>
+          <img src="/images/men/pexels-andrew-nevins-resize.jpg" alt="" class="cart-img-thumbnail" />
+        </figure>
+        <div >
+            <h2>shipping method</h2>
+            <form method="get">
+                <label for="checkout"></label>
+               <div class="form-checkout">
+                <select name="checkout" id="checkout" name="checkout">
+                  <option value="spar">spar ål</option>
+                  <option value="mailbox">mailbox</option>
+                  <option value="pick-up">pick up point</option>
+                </select>
+              </form>
+            <h3>payment</h3>
+            <form method="get">
+                <label for="payment"></label>
+               <div class="form-checkout">
+                <select name="payment" id="payment" name="payment">
+                  <option value="visa">visa</option>
+                  <option value="mastercard">mastercard</option>
+                  <option value="debit">debit</option>
+                </select>
+              </form>
+              <div class="checkout-button">
+              <form action="/cta-response/purchase-succesful.html" method="get">
+                <button class="cta-submit">purchase</button>
+            </form>
+            </div>
+          <form>
+            <input type="button" value="back" onclick="history.back()" class="cta-submit" />
+          </form>
         </div>
-      </section>
-      <section class="contact">
-        <h2>contact us</h2>
-        <div class="contact-text">
-          <p>if you have any questions please</p>
-          <p>contact us in this form and we will</p>
-          <p>get back to you as soon as possible</p>
-        </div>
-        <form method="post">
-          <label for="name"></label>
-          <input type="name" placeholder="your name" id="name" name="name" />
-          <label for="email"></label>
-          <input type="email" placeholder="email address" id="email" name="email" />
-          <label for="textarea"></label>
-          <textarea name="text" id="text" cols="30" rows="10"></textarea>
-          <a href="#" class="cta-submit">Submit</a>
-        </form>
       </section>
     </main>
     <footer>
@@ -98,3 +112,4 @@
     </footer>
   </body>
 </html>
+s

@@ -74,9 +74,13 @@ main {
 
 .text-box {
   background-color: var(--header-color);
-  margin: 40px 20px 5px 20px;
+  margin: 40px 20px 0px 20px;
   padding: 5px;
   box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+.text-box::first-letter {
+  text-transform: uppercase;
 }
 
 .text-box-cart {
@@ -89,8 +93,8 @@ main {
   display: flex;
   max-width: 1000px;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 23px;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 .form-size label {
@@ -218,11 +222,16 @@ main img {
   background-color: #0a3641;
 }
 
+.product-form {
+  display: flex;
+  flex-direction: row;
+}
+
 .products-container {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 20px auto;
   text-align: center;
   padding: 0 10px 0 10px;
 }
@@ -358,9 +367,9 @@ h3 {
   margin: 0 auto;
   color: #fff;
   background-color: var(--header-color);
-  border-radius: 5px;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 1.4rem;
 }
 
 h2 {
@@ -374,6 +383,17 @@ a {
   color: white;
 }
 
+.checkout {
+  display: inline-block;
+  background-color: var(--header-color);
+  margin: 50px auto;
+  text-align: center;
+}
+
+.checkout img {
+  height: auto;
+}
+
 /* Shopping cart */
 
 .shopping-cart {
@@ -382,7 +402,11 @@ a {
 
 .shopping-cart-text {
   text-align: center;
-  box-shadow: 5px 5px 6px 1px rgb(0 0 0 / 50%);
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shopping-cart-text::first-letter {
+  text-transform: uppercase;
 }
 
 .cart-container {
@@ -426,6 +450,10 @@ a {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+}
+
+.checkout-button {
+  margin: 20px;
 }
 
 /* contact page */
@@ -694,8 +722,12 @@ footer {
 
   .jacket-container {
     display: flex;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    padding: 40px;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+
+  .jacket-container > * {
   }
 
   .jacket-container1 h1 {
@@ -703,17 +735,22 @@ footer {
   }
 
   .jacket-container1 {
-    flex: 1 56%;
+    flex: 1 1 460px;
   }
 
   .jacket-container2 {
-    flex: 1 44%;
+    flex: 1 1 360px;
   }
 
   .products-container img {
-    height: 100%;
-    object-fit: cover;
-    display: flex;
+    /* height: 100%;
+    /* margin: 20px 20px 20px 5px; */
+    /* object-fit: cover;
+    display: flex; */
+  }
+
+  .text-box {
+    /* padding: 14px; */
   }
 
   #search-bar {
@@ -734,7 +771,7 @@ footer {
   main img {
     display: flex;
     max-width: 1000px;
-    margin: 0xp;
+    /* margin-top: 27px; */
   }
 
   img a {
@@ -754,6 +791,14 @@ footer {
 
   .contact-us {
     font-size: 1.5rem;
+  }
+
+  .contact-text {
+    background-color: var(--header-color);
+  }
+
+  .contact-text::first-letter {
+    text-transform: uppercase;
   }
 
   .contact {
@@ -790,7 +835,7 @@ footer {
     display: flex;
     max-width: 400px;
     margin: 20px auto;
-    box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5); */
     font-family: Tahoma, Geneva, Verdana, sans-serif;
   }
 
@@ -803,12 +848,42 @@ footer {
 
   .cart-img-thumbnail {
     display: flex;
-    height: 358px;
+    height: auto;
+    width: 248px;
     padding: 0px;
   }
 
+  .cart-shop {
+    display: flex;
+    background-color: var(--header-color);
+    padding: 19px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
   .shopping-cart-text {
-    display: inline-block;
+    /* display: flex; */
+  }
+
+  .test-container {
+    width: 70%;
+    height: 85%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+  }
+
+  /* checkout */
+
+  .checkout {
+    display: flex;
+    background-color: var(--header-color);
+    margin: 50px auto;
+    justify-content: center;
+  }
+
+  .checkout img {
+    height: 198px;
   }
 
   /* footer */
@@ -923,9 +998,9 @@ footer {
   }
 
   .products-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    /* width: 100%; */
+    /* height: 100%;
+    object-fit: contain; */
   }
 
   #search-bar {
@@ -939,7 +1014,7 @@ footer {
   main img {
     display: flex;
     max-width: 1000px;
-    margin: 0xp;
+    margin: 0px;
   }
 
   .about-us {
