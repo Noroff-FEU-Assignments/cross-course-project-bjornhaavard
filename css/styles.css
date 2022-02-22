@@ -388,6 +388,7 @@ a {
   background-color: var(--header-color);
   margin: 50px auto;
   text-align: center;
+  padding: 40px;
 }
 
 .checkout img {
@@ -414,7 +415,7 @@ a {
 }
 
 .cart-img-thumbnail {
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .counter {
@@ -456,11 +457,15 @@ a {
   margin: 20px;
 }
 
+.shipping-cont .payment-cont {
+  margin: 20px 0px 20px 0px;
+}
+
 /* contact page */
 
 form {
   display: inline-block;
-  flex-direction: column;
+
   max-width: 400px;
 }
 
@@ -482,7 +487,7 @@ textarea {
 }
 
 textarea {
-  margin-top: 40px;
+  margin-top: 20px;
   height: 80%;
   min-height: 100px;
 }
@@ -504,6 +509,19 @@ textarea {
   font-family: "Montserrat", Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
   text-decoration: underline;
   text-transform: uppercase;
+}
+
+.contact-text {
+  background-color: var(--header-color);
+}
+
+.contact-cont {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .cta-submit {
@@ -793,10 +811,6 @@ footer {
     font-size: 1.5rem;
   }
 
-  .contact-text {
-    background-color: var(--header-color);
-  }
-
   .contact-text::first-letter {
     text-transform: uppercase;
   }
@@ -865,14 +879,6 @@ footer {
     /* display: flex; */
   }
 
-  .test-container {
-    width: 70%;
-    height: 85%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 25px 40px #1687d933;
-  }
-
   /* checkout */
 
   .checkout {
@@ -880,10 +886,7 @@ footer {
     background-color: var(--header-color);
     margin: 50px auto;
     justify-content: center;
-  }
-
-  .checkout img {
-    height: 198px;
+    gap: 50px;
   }
 
   /* footer */

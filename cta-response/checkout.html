@@ -55,23 +55,24 @@
     </header>
     <main>
       <h1>checkout</h1>
+      <div class="shop-cart">
       <section class="checkout">
         <figure>
           <img src="/images/men/pexels-andrew-nevins-resize.jpg" alt="" class="cart-img-thumbnail" />
         </figure>
         <div >
             <h2>shipping method</h2>
-            <form method="get">
-                <label for="checkout"></label>
+            <form method="get" class="shipping-cont">
+                <label for="shipping"></label>
                <div class="form-checkout">
-                <select name="checkout" id="checkout" name="checkout">
+                <select name="shipping" id="shipping" name="shipping">
                   <option value="spar">spar ål</option>
                   <option value="mailbox">mailbox</option>
                   <option value="pick-up">pick up point</option>
                 </select>
               </form>
             <h3>payment</h3>
-            <form method="get">
+            <form method="get" class="payment-cont">
                 <label for="payment"></label>
                <div class="form-checkout">
                 <select name="payment" id="payment" name="payment">
@@ -90,6 +91,7 @@
           </form>
         </div>
       </section>
+    </div>
     </main>
     <footer>
       <p class="footer-text">Interested in joining us pushing the comfort zone?</p>
