@@ -131,37 +131,11 @@ nav {
   height: 90vh;
 }
 
-.icons-nav {
-  display: none;
-  gap: 5px;
-  animation: nav-icon;
-  animation-duration: 1.5s;
-}
-
-@keyframes nav-icon {
-  0% {
-    right: -100%;
-  }
-  50% {
-    right: 0%;
-  }
-  100% {
-    right: 0%;
-  }
-}
-
-.nav menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-nav > * {
+.nav-menu {
   display: flex;
   flex-direction: column;
   width: 100%;
   text-align: center;
-  margin-top: 10px;
   gap: 0px;
 }
 
@@ -312,33 +286,6 @@ img a {
   margin: 0 auto;
 }
 
-#hamburger-menu:checked ~ nav {
-  display: block;
-  animation-name: menu;
-  animation-duration: 1.5s;
-}
-
-@keyframes menu {
-  0% {
-    right: -100%;
-  }
-  50% {
-    right: 0%;
-  }
-  100% {
-    right: 0%;
-  }
-}
-
-#hamburger-menu:checked ~ .icons-nav {
-  display: flex;
-  position: absolute;
-  right: 18%;
-  top: 60%;
-  z-index: 1000;
-  gap: 20px;
-}
-
 #hamburger-menu {
   display: none;
   align-items: end;
@@ -381,18 +328,6 @@ h2 {
 a {
   font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
   color: white;
-}
-
-.checkout {
-  display: inline-block;
-  background-color: var(--header-color);
-  margin: 50px auto;
-  text-align: center;
-  padding: 40px;
-}
-
-.checkout img {
-  height: auto;
 }
 
 /* Shopping cart */
@@ -454,11 +389,31 @@ a {
 }
 
 .checkout-button {
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .shipping-cont .payment-cont {
   margin: 20px 0px 20px 0px;
+}
+
+/* checkout */
+
+.checkout {
+  display: inline-block;
+  background-color: var(--header-color);
+  margin: 50px auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.checkout img {
+  height: auto;
+}
+
+.checkout-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* contact page */
@@ -537,6 +492,7 @@ textarea {
   max-width: fit-content;
   align-items: flex-end;
   cursor: pointer;
+  border: 0px;
 }
 
 .back {
@@ -633,7 +589,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 40px;
+  margin: 20px 0px 0px 0px;
 }
 
 .purchase::first-letter {
@@ -653,9 +609,9 @@ footer {
 
 @media (min-width: 736px) {
   nav {
-    display: block;
+    display: flex;
     background-color: var(--header-color);
-    position: relative;
+    posistion: relative;
     height: 30px;
     top: 0px;
     text-align: center;
@@ -781,15 +737,9 @@ footer {
     display: none;
   }
 
-  .contact label {
-    display: flex;
-    text-align: center;
-  }
-
   main img {
     display: flex;
     max-width: 1000px;
-    /* margin-top: 27px; */
   }
 
   img a {
@@ -849,7 +799,6 @@ footer {
     display: flex;
     max-width: 400px;
     margin: 20px auto;
-    /* box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5); */
     font-family: Tahoma, Geneva, Verdana, sans-serif;
   }
 
@@ -875,10 +824,6 @@ footer {
     gap: 40px;
   }
 
-  .shopping-cart-text {
-    /* display: flex; */
-  }
-
   /* checkout */
 
   .checkout {
@@ -887,6 +832,10 @@ footer {
     margin: 50px auto;
     justify-content: center;
     gap: 50px;
+  }
+
+  .continue-shop {
+    margin-bottom: 20px;
   }
 
   /* footer */
@@ -1000,12 +949,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .products-container img {
-    /* width: 100%; */
-    /* height: 100%;
-    object-fit: contain; */
-  }
-
   #search-bar {
     margin-left: 50px;
   }
@@ -1048,7 +991,7 @@ footer {
 
   .contact-about {
     display: flex;
-    justify-content: end;
+    justify-content: left;
     margin-right: 20px;
     gap: 20px;
   }
@@ -1081,5 +1024,47 @@ footer {
 
   .products-container {
     grid-gap: 50px;
+  }
+}
+
+@media (max-width: 735px) {
+  #hamburger-menu ~ nav .icons-nav {
+    transition: all 400ms ease;
+    right: -100%;
+    display: none;
+    justify-content: center;
+  }
+
+  #hamburger-menu:checked ~ nav .icons-nav {
+    right: 0;
+    display: flex;
+    right: 18%;
+    top: 60%;
+    z-index: 1000;
+    gap: 20px;
+  }
+
+  #hamburger-menu ~ nav {
+    transition: all 400ms ease;
+    right: -100%;
+    display: block;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    right: 0;
+  }
+
+  #hamburger-menu:checked ~ nav .icons-nav {
+    right: 0px;
+  }
+
+  .icons-nav a {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    width: 100%;
   }
 }

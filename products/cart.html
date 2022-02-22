@@ -34,24 +34,24 @@
           <a href="/products/women/women.html" class="women">Women</a>
           <a href="/products/kids/kids.html" class="kids">Kids</a>
         </div>
+        <div class="icons-nav">
+          <figure class="favorite">
+            <a href="#">
+              <img src="/images/Icon-favorite-border.png" alt="favorite" />
+            </a>
+          </figure>
+          <figure class="cart">
+            <a href="#">
+              <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
+            </a>
+          </figure>
+          <figure class="person">
+            <a href="#">
+              <img src="/images/Icon-material-person-outline.png" alt="login" />
+            </a>
+          </figure>
+        </div>
       </nav>
-      <div class="icons-nav">
-        <figure class="favorite">
-          <a href="#">
-            <img src="/images/Icon-favorite-border.png" alt="favorite" />
-          </a>
-        </figure>
-        <figure class="cart">
-          <a href="#">
-            <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
-          </a>
-        </figure>
-        <figure class="person">
-          <a href="#">
-            <img src="/images/Icon-material-person-outline.png" alt="login" />
-          </a>
-        </figure>
-      </div>
     </header>
     <main>
       <h1>shopping cart</h1>
@@ -71,7 +71,7 @@
             <div class="count">1</div>
             <div class="button">+</div>
           </div>
-          <form method="post">
+          <form action="/cta-response/checkout.html" method="post">
             <label for="color">color</label>
            <div class="form-color-cart">
             <select name="color" id="color">
@@ -80,10 +80,10 @@
               <option value="orange">orange</option>
               <option value="green">green</option>
             </select>
-          </form>
-         <form action="/cta-response/checkout.html" method="get">
+            <div>
             <button class="cta-submit">checkout</button>
-        </form>
+          </div>
+          </form>
       </section>
     </div>
     </section>

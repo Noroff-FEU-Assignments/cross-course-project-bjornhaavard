@@ -34,24 +34,25 @@
           <a href="/products/women/women.html" class="women">Women</a>
           <a href="/products/kids/kids.html" class="kids">Kids</a>
         </div>
+        <div class="icons-nav">
+            <figure class="favorite">
+              <a href="#">
+                <img src="/images/Icon-favorite-border.png" alt="favorite" />
+              </a>
+            </figure>
+            <figure class="cart">
+              <a href="#">
+                <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
+              </a>
+            </figure>
+            <figure class="person">
+              <a href="#">
+                <img src="/images/Icon-material-person-outline.png" alt="login" />
+              </a>
+            </figure>
+          </div>
       </nav>
-      <div class="icons-nav">
-        <figure class="favorite">
-          <a href="#">
-            <img src="/images/Icon-favorite-border.png" alt="favorite" />
-          </a>
-        </figure>
-        <figure class="cart">
-          <a href="#">
-            <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
-          </a>
-        </figure>
-        <figure class="person">
-          <a href="#">
-            <img src="/images/Icon-material-person-outline.png" alt="login" />
-          </a>
-        </figure>
-      </div>
+  
     </header>
     <main>
       <h1>checkout</h1>
@@ -60,7 +61,7 @@
         <figure>
           <img src="/images/men/pexels-andrew-nevins-resize.jpg" alt="" class="cart-img-thumbnail" />
         </figure>
-        <div >
+        <div class="checkout-text">
             <h2>shipping method</h2>
             <form method="get" class="shipping-cont">
                 <label for="shipping"></label>
@@ -84,7 +85,7 @@
               <div class="checkout-button">
               <form action="/cta-response/purchase-succesful.html" method="get">
                 <button class="cta-submit">purchase</button>
-            </form>
+             </form>
             </div>
           <form>
             <input type="button" value="back" onclick="history.back()" class="cta-submit" />

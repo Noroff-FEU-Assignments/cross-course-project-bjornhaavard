@@ -34,24 +34,24 @@
           <a href="/products/women/women.html" class="women">Women</a>
           <a href="/products/kids/kids.html" class="kids">Kids</a>
         </div>
+        <div class="icons-nav">
+          <figure class="favorite">
+            <a href="#">
+              <img src="/images/Icon-favorite-border.png" alt="favorite" />
+            </a>
+          </figure>
+          <figure class="cart">
+            <a href="/products/cart.html">
+              <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
+            </a>
+          </figure>
+          <figure class="person">
+            <a href="#">
+              <img src="/images/Icon-material-person-outline.png" alt="person" />
+            </a>
+          </figure>
+        </div>
       </nav>
-      <div class="icons-nav">
-        <figure class="favorite">
-          <a href="#">
-            <img src="/images/Icon-favorite-border.png" alt="favorite" />
-          </a>
-        </figure>
-        <figure class="cart">
-          <a href="/products/cart.html">
-            <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
-          </a>
-        </figure>
-        <figure class="person">
-          <a href="#">
-            <img src="/images/Icon-material-person-outline.png" alt="person" />
-          </a>
-        </figure>
-      </div>
     </header>
     <main>
       <section class="welcome">
@@ -62,7 +62,7 @@
       <section class="contact">
         <h2>register</h2>
         <p>please fill in your information</p>
-        <form method="post">
+        <form action="/cta-response/register-successful.html" method="get">
           <label for="name"></label>
           <input type="name" placeholder="your full name" id="name" name="name" />
           <label for="email"></label>
@@ -72,9 +72,7 @@
           <input type="password" placeholder="type in a password" id="password" name="password" />
           <input type="pasword" placeholder="reenter your password" id="password" name="password" />
           <div>
-            <form action="/cta-response/register-successful.html" method="post">
-              <button class="cta-submit">register</button>
-            </form>
+            <button class="cta-submit">register</button>
           </div>
         </form>
       </section>
