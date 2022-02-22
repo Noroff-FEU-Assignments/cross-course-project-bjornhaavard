@@ -60,21 +60,27 @@
         </div>
       </section>
       <section class="contact">
-        <h2>register</h2>
-        <p>please fill in your information</p>
-        <form action="/cta-response/register-successful.html" method="get">
-          <label for="name"></label>
-          <input type="name" placeholder="your full name" id="name" name="name" />
-          <label for="email"></label>
-          <input type="email" placeholder="email address" id="email" name="email" />
-          <label for="phone"></label>
-          <input type="tel" placeholder="phone number" id="phone" name="phone" />
-          <input type="password" placeholder="type in a password" id="password" name="password" />
-          <input type="pasword" placeholder="reenter your password" id="password" name="password" />
-          <div>
-            <button class="cta-submit">register</button>
-          </div>
-        </form>
+        <div class="contact-form">
+          <h2>register</h2>
+          <p>please fill in your information</p>
+          <form action="/cta-response/register-successful.html" method="get">
+            <div class="contact-column">
+              <label for="name"></label>
+              <input type="name" placeholder="your full name" id="name" name="name" />
+              <label for="email"></label>
+              <input type="email" placeholder="email address" id="email" name="email" />
+            </div>
+            <div class="contact-column">
+              <label for="phone"></label>
+              <input type="tel" placeholder="phone number" id="phone" name="phone" />
+              <input type="password" placeholder="type in a password" id="password" name="password" />
+            </div>
+            <input type="pasword" placeholder="reenter your password" id="password" name="password" />
+            <div>
+              <button class="cta-submit">register</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <footer>

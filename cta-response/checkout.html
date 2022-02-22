@@ -34,23 +34,23 @@
           <a href="/products/women/women.html" class="women">Women</a>
           <a href="/products/kids/kids.html" class="kids">Kids</a>
         </div>
-        <div class="icons-nav">
-            <figure class="favorite">
-              <a href="#">
-                <img src="/images/Icon-favorite-border.png" alt="favorite" />
-              </a>
-            </figure>
-            <figure class="cart">
-              <a href="#">
-                <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
-              </a>
-            </figure>
-            <figure class="person">
-              <a href="#">
-                <img src="/images/Icon-material-person-outline.png" alt="login" />
-              </a>
-            </figure>
-          </div>
+            <div class="icons-nav">
+        <figure class="favorite">
+          <a href="#">
+            <img src="/images/Icon-favorite-border.png" alt="favorite" />
+          </a>
+        </figure>
+        <figure class="cart">
+          <a href="#">
+            <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
+          </a>
+        </figure>
+        <figure class="person">
+          <a href="#">
+            <img src="/images/Icon-material-person-outline.png" alt="login" />
+          </a>
+        </figure>
+      </div>
       </nav>
   
     </header>
@@ -73,7 +73,7 @@
                 </select>
               </form>
             <h3>payment</h3>
-            <form method="get" class="payment-cont">
+            <form action="/cta-response/purchase-succesful.html" method="get" class="payment-cont">
                 <label for="payment"></label>
                <div class="form-checkout">
                 <select name="payment" id="payment" name="payment">
@@ -81,16 +81,13 @@
                   <option value="mastercard">mastercard</option>
                   <option value="debit">debit</option>
                 </select>
-              </form>
-              <div class="checkout-button">
-              <form action="/cta-response/purchase-succesful.html" method="get">
+                <div class="checkout-button">
                 <button class="cta-submit">purchase</button>
-             </form>
+                </div>
+                <div>
+                <input type="button" value="back" onclick="history.back()" class="cta-submit" />
             </div>
-          <form>
-            <input type="button" value="back" onclick="history.back()" class="cta-submit" />
-          </form>
-        </div>
+              </form>
       </section>
     </div>
     </main>

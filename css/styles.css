@@ -24,6 +24,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -67,6 +68,9 @@ main {
 }
 
 .box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0%;
   padding: 0px;
   font-size: 1.1rem;
@@ -123,7 +127,6 @@ main {
 nav {
   background-color: var(--header-color);
   display: none;
-  position: absolute;
   z-index: 1000;
   width: 60%;
   right: 0px;
@@ -134,6 +137,7 @@ nav {
 .nav-menu {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   text-align: center;
   gap: 0px;
@@ -413,6 +417,7 @@ a {
 .checkout-text {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
@@ -436,7 +441,7 @@ label {
 input,
 textarea {
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px auto;
   padding: 10px;
   border: none;
 }
@@ -468,6 +473,16 @@ textarea {
 
 .contact-text {
   background-color: var(--header-color);
+  padding: 40px;
+}
+
+.contact-form {
+  background-color: var(--header-color);
+}
+
+.contact-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-cont {
@@ -611,7 +626,7 @@ footer {
   nav {
     display: flex;
     background-color: var(--header-color);
-    posistion: relative;
+    position: relative;
     height: 30px;
     top: 0px;
     text-align: center;
@@ -624,10 +639,10 @@ footer {
     padding: 0px;
   }
 
-  nav > * {
+  /* nav > * {
     margin-top: 0px;
     padding: 0px;
-  }
+  } */
 
   .before {
     display: flex;
@@ -663,10 +678,10 @@ footer {
     padding: 4px;
     font-family: "Montserrat", tahoma, sans-serif;
     font-weight: bold;
-    display: inline-block;
-    position: absolute;
-    top: 1px;
-    left: 28%;
+    /* display: inline-block; */
+    /* position: absolute; */
+    /* top: 1px; */
+    /* left: 28%; */
     color: #fff;
     background-color: var(--header-color);
   }
@@ -674,6 +689,7 @@ footer {
   .nav-menu {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: left;
     gap: 20px;
   }
@@ -681,7 +697,7 @@ footer {
   .icons-nav {
     display: flex;
     gap: 20px;
-    margin-right: 0px;
+    align-items: center;
   }
 
   .header-bar {
@@ -714,17 +730,6 @@ footer {
 
   .jacket-container2 {
     flex: 1 1 360px;
-  }
-
-  .products-container img {
-    /* height: 100%;
-    /* margin: 20px 20px 20px 5px; */
-    /* object-fit: cover;
-    display: flex; */
-  }
-
-  .text-box {
-    /* padding: 14px; */
   }
 
   #search-bar {
@@ -790,7 +795,7 @@ footer {
   }
 
   .contact-about > * {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   /* shopping cart */
@@ -877,16 +882,6 @@ footer {
 /* Desktop Media */
 
 @media (min-width: 913px) {
-  nav {
-    display: block;
-    position: relative;
-    height: 30px;
-    top: 0px;
-    text-align: center;
-    margin-top: 0px;
-    gap: 0px;
-  }
-
   nav a {
     border: none;
     padding: 0px;
@@ -935,7 +930,6 @@ footer {
   .icons-nav {
     display: flex;
     gap: 20px;
-    margin-right: 70px;
   }
 
   .header-bar {
@@ -1030,9 +1024,17 @@ footer {
 @media (max-width: 735px) {
   #hamburger-menu ~ nav .icons-nav {
     transition: all 400ms ease;
-    right: -100%;
+    /* right: -100%; */
     display: none;
     justify-content: center;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    flex-direction: column;
   }
 
   #hamburger-menu:checked ~ nav .icons-nav {
@@ -1045,17 +1047,15 @@ footer {
   }
 
   #hamburger-menu ~ nav {
-    transition: all 400ms ease;
-    right: -100%;
     display: block;
+    position: absolute;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
   }
 
   #hamburger-menu:checked ~ nav {
-    right: 0;
-  }
-
-  #hamburger-menu:checked ~ nav .icons-nav {
-    right: 0px;
+    transform: translateX(0%);
+    transition: all 0.5s ease;
   }
 
   .icons-nav a {
