@@ -26,9 +26,9 @@
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <nav>
         <div class="nav-menu">
-          <form class="box">
-            <input type="text" id="search-bar" />
-            <i class="fas fa-search"></i>
+          <form action="/cta-response/search.html" method="get" class="box">
+            <input type="text" id="search-bar" name="search-bar" />
+            <button class="fas-fa-search"><i class="fas fa-search"></i></button>
           </form>
           <a href="/products/men/men.html" class="men active">Men</a>
           <a href="/products/women/women.html" class="women">Women</a>
@@ -58,10 +58,9 @@
         <p>thank you for contacting us</p>
         <p>you will recieve a email confirmation shortly</p>
       </div>
-      <div class="back">
-        <div>
-        <a href="/products/cart.html" class="cta-submit">back</a>
-      </div>
+      <div>
+        <input type="button" value="back" onclick="history.back()" class="cta-submit" />
+    </div>
       <div>
         <a href="/index.html" class="cta-submit">continue shopping</a>
       </div>

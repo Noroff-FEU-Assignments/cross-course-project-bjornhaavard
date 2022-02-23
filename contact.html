@@ -26,9 +26,9 @@
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <nav>
         <div class="nav-menu">
-          <form class="box">
-            <input type="text" id="search-bar" />
-            <i class="fas fa-search"></i>
+          <form action="/cta-response/search.html" method="get" class="box">
+            <input type="text" id="search-bar" name="search-bar" />
+            <button class="fas-fa-search"><i class="fas fa-search"></i></button>
           </form>
           <a href="/products/men/men.html" class="men">Men</a>
           <a href="/products/women/women.html" class="women">Women</a>
@@ -62,23 +62,22 @@
       <section class="contact">
         <h2>contact us</h2>
         <div class="contact-cont">
-        <div class="contact-text">
-          <p>if you have any questions please</p>
-          <p>contact us in this form and we will</p>
-          <p>get back to you as soon as possible</p>
-        </div>
-        <form method="post">
-          <label for="name"></label>
-          <input type="name" placeholder="your name" id="name" name="name" />
-          <label for="email"></label>
-          <input type="email" placeholder="email address" id="email" name="email" />
-          <label for="textarea"></label>
-          <textarea name="text" id="text" cols="30" rows="10"></textarea>
-        </form>
-        <form action="/cta-response/contact-successful.html" method="get">
-           <button class="cta-submit">submit</button>
-       </form>
-        </form>
+          <div class="contact-text">
+            <p>if you have any questions please</p>
+            <p>contact us in this form and we will</p>
+            <p>get back to you as soon as possible</p>
+          </div>
+          <div class="contact-form">
+            <form action="/cta-response/contact-successful.html" method="get">
+              <label for="name"></label>
+              <input type="name" placeholder="your name" id="name" name="name" />
+              <label for="email"></label>
+              <input type="email" placeholder="email address" id="email" name="email" />
+              <label for="textarea"></label>
+              <textarea name="text" id="text" cols="30" rows="10"></textarea>
+              <button class="cta-submit">submit</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

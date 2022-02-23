@@ -26,9 +26,9 @@
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <nav>
         <div class="nav-menu">
-          <form class="box">
-            <input type="text" id="search-bar" />
-            <i class="fas fa-search"></i>
+          <form action="/cta-response/search.html" method="get" class="box">
+            <input type="text" id="search-bar" name="search-bar" />
+            <button class="fas-fa-search"><i class="fas fa-search"></i></button>
           </form>
           <a href="/products/men/men.html" class="men">Men</a>
           <a href="/products/women/women.html" class="women">Women</a>
@@ -64,18 +64,18 @@
           <h2>register</h2>
           <p>please fill in your information</p>
           <form action="/cta-response/register-successful.html" method="get">
-            <div class="contact-column">
+            <div class="register-column">
               <label for="name"></label>
               <input type="name" placeholder="your full name" id="name" name="name" />
               <label for="email"></label>
               <input type="email" placeholder="email address" id="email" name="email" />
             </div>
-            <div class="contact-column">
+            <div class="register-column">
               <label for="phone"></label>
               <input type="tel" placeholder="phone number" id="phone" name="phone" />
               <input type="password" placeholder="type in a password" id="password" name="password" />
             </div>
-            <input type="pasword" placeholder="reenter your password" id="password" name="password" />
+            <input type="repassword" placeholder="reenter your password" id="repassword" name="repassword" />
             <div>
               <button class="cta-submit">register</button>
             </div>
