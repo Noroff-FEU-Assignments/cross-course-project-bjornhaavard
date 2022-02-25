@@ -58,7 +58,7 @@ p {
 
 .before {
   display: none;
-  text-shadow: var(--shadow);
+  /* text-shadow: var(--shadow); */
 }
 
 main {
@@ -167,6 +167,14 @@ nav a {
   gap: 0px;
 }
 
+.header-bar {
+  background-color: #0a3641;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* about-us */
 
 .about-main {
@@ -201,14 +209,6 @@ nav a {
 
 .about-text p {
   padding: 10px;
-}
-
-.header-bar {
-  background-color: #0a3641;
-  margin-top: 20px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
 }
 
 main img {
@@ -280,7 +280,6 @@ form {
 }
 
 .picture-name:hover {
-  transition: hover;
   background-color: #fff;
   color: #0a3641;
   transition: all 0.5s ease-out;
@@ -296,19 +295,6 @@ form {
   padding: 10px 70px;
   text-transform: capitalize;
   box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
-}
-
-.cta {
-  font-family: "Montserrat", tahoma, sans-serif;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #0a3641;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 10px;
-  text-transform: capitalize;
-  margin: 10px 0px 10px 0px;
 }
 
 figure {
@@ -484,7 +470,6 @@ textarea {
   font-family: "Montserrat", Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
   text-shadow: var(--shadow);
   background-color: var(--header-color);
-  /* padding: 10px; */
 }
 
 .contact-text {
@@ -494,7 +479,6 @@ textarea {
 
 .contact-form {
   background-color: var(--header-color);
-  /* padding: 20px; */
   max-width: 400px;
   margin: auto;
 }
@@ -511,6 +495,21 @@ textarea {
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+
+/* Buttons */
+
+.cta {
+  font-family: "Montserrat", tahoma, sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0a3641;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  text-transform: capitalize;
+  margin: 10px 0px 10px 0px;
 }
 
 .cta-submit {
@@ -530,9 +529,30 @@ textarea {
   margin-bottom: 20px;
 }
 
+.cta-register {
+  display: inline-block;
+  background-color: var(--yellow);
+  padding: 10px 70px;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
 .back {
   display: flex;
   margin-top: 20px;
+}
+
+/* register */
+
+s .register-form {
+  background-color: var(--header-color);
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
 }
 
 /* footer*/
@@ -549,18 +569,6 @@ footer {
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 400;
-}
-
-.cta-register {
-  display: inline-block;
-  background-color: var(--yellow);
-  padding: 10px 70px;
-  font-size: 17px;
-  font-weight: bold;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 10px;
 }
 
 .nav-footer {
