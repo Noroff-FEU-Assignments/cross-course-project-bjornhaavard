@@ -99,7 +99,8 @@ main {
   padding: 0px;
 }
 
-.text-box::first-letter {
+.text-box::first-letter,
+p::first-letter {
   text-transform: uppercase;
 }
 
@@ -163,7 +164,6 @@ nav a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  text-align: center;
   gap: 0px;
 }
 
@@ -184,10 +184,6 @@ nav a {
   margin: auto;
   padding-bottom: 30px;
   text-shadow: 0 0 5px black;
-}
-
-.about-main p::first-letter {
-  text-transform: uppercase;
 }
 
 .about-us {
@@ -250,10 +246,6 @@ main img {
 .product-grid {
   background-color: var(--header-color);
   box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.5);
-}
-
-form::first-letter {
-  text-transform: uppercase;
 }
 
 form {
@@ -374,10 +366,6 @@ h3 {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.shopping-cart-text::first-letter {
-  text-transform: uppercase;
-}
-
 .shop-cart {
   display: flex;
 }
@@ -496,17 +484,17 @@ textarea {
   font-family: "Montserrat", Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
   text-shadow: var(--shadow);
   background-color: var(--header-color);
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .contact-text {
   background-color: var(--header-color);
-  padding: 42px;
+  padding: 52px;
 }
 
 .contact-form {
   background-color: var(--header-color);
-  padding: 20px;
+  /* padding: 20px; */
   max-width: 400px;
   margin: auto;
 }
@@ -603,7 +591,6 @@ footer {
   background-color: var(--header-color);
   color: #fff;
   max-width: 300px;
-  border-radius: 5px;
   padding: 15px;
   text-align: left;
   font-size: 1.3rem;
@@ -611,10 +598,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   margin: 20px 0px 0px 0px;
-}
-
-.purchase::first-letter {
-  text-transform: uppercase;
 }
 
 .back {
@@ -758,10 +741,6 @@ footer {
     top: 30px;
   }
 
-  .contact-text::first-letter {
-    text-transform: uppercase;
-  }
-
   .contact {
     display: flex;
     flex-direction: column;
@@ -895,8 +874,6 @@ footer {
   }
 
   #hamburger-menu ~ nav .icons-nav {
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
     display: none;
     justify-content: center;
   }
@@ -908,19 +885,14 @@ footer {
     top: 60%;
     z-index: 1000;
     gap: 0px;
-    transform: translateX(0%);
   }
 
   #hamburger-menu ~ nav {
     position: absolute;
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
-    display: block;
+    display: none;
   }
 
   #hamburger-menu:checked ~ nav {
-    transform: translateX(0%);
-    transition: transform 0.5s ease;
     display: block;
   }
 
