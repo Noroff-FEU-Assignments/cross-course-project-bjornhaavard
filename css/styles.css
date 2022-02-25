@@ -57,7 +57,6 @@ p {
 
 .before {
   display: none;
-  /* text-shadow: var(--shadow); */
 }
 
 main {
@@ -337,7 +336,6 @@ h3 {
   padding: 5px;
   display: flex;
   justify-content: center;
-  font-size: 1.6rem;
 }
 
 /* Shopping cart */
@@ -539,15 +537,6 @@ textarea {
   margin-top: 20px;
 }
 
-/* register */
-
-.register-form {
-  background-color: var(--header-color);
-  padding: 20px;
-  max-width: 400px;
-  margin: auto;
-}
-
 /* footer*/
 
 footer {
@@ -612,6 +601,13 @@ footer {
 
 /* register */
 
+.register-form {
+  background-color: var(--header-color);
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
 .register-column {
   display: flex;
   flex-direction: column;
@@ -619,6 +615,60 @@ footer {
 
 #repassword {
   margin-bottom: 40px;
+}
+
+/* Mobile Navigation */
+
+@media (max-width: 400px) {
+  nav {
+    width: 100%;
+  }
+}
+
+@media (max-width: 735px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  #hamburger-menu ~ nav .icons-nav {
+    display: none;
+    justify-content: center;
+  }
+
+  #hamburger-menu:checked ~ nav .icons-nav {
+    right: 0;
+    display: flex;
+    right: 18%;
+    top: 60%;
+    z-index: 1000;
+    gap: 0px;
+  }
+
+  #hamburger-menu ~ nav {
+    position: absolute;
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+
+  .icons-nav a {
+    display: block;
+    margin: 20px 10px 10px 0px;
+  }
 }
 
 /* tablet media */
@@ -854,57 +904,5 @@ footer {
 
   .footer-text {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 735px) {
-  .nav {
-    position: absolute;
-    top: 0;
-    width: 400px;
-    height: 100%;
-    flex-direction: column;
-  }
-
-  .nav-menu {
-    gap: 20px;
-  }
-
-  #hamburger-menu {
-    display: none;
-  }
-
-  #hamburger-menu ~ nav .icons-nav {
-    display: none;
-    justify-content: center;
-  }
-
-  #hamburger-menu:checked ~ nav .icons-nav {
-    right: 0;
-    display: flex;
-    right: 18%;
-    top: 60%;
-    z-index: 1000;
-    gap: 0px;
-  }
-
-  #hamburger-menu ~ nav {
-    position: absolute;
-    display: none;
-  }
-
-  #hamburger-menu:checked ~ nav {
-    display: block;
-  }
-
-  .icons-nav a {
-    display: block;
-    margin: 20px 10px 10px 0px;
-  }
-}
-
-@media (max-width: 400px) {
-  nav {
-    width: 100%;
   }
 }
