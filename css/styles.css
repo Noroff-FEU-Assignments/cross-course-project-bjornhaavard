@@ -14,7 +14,6 @@
   --background-color: #687e8c;
   --header-color: #0a3641;
   --yellow: #e1bd2d;
-  --shadow: 0px 0px 5px black;
   --black: black;
 }
 
@@ -434,11 +433,6 @@ form {
   max-width: 400px;
 }
 
-#name,
-#email {
-  text-shadow: 0px 0p 5px black;
-}
-
 label {
   justify-content: center;
 }
@@ -468,7 +462,6 @@ textarea {
 
 .contact p {
   font-family: "Montserrat", Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
-  text-shadow: var(--shadow);
   background-color: var(--header-color);
 }
 
@@ -548,7 +541,7 @@ textarea {
 
 /* register */
 
-s .register-form {
+.register-form {
   background-color: var(--header-color);
   padding: 20px;
   max-width: 400px;
