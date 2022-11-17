@@ -618,6 +618,9 @@ footer {
   nav {
     width: 100%;
   }
+  .cta-submit {
+    padding: 10px 30px;
+  }
 }
 
 @media (max-width: 735px) {
@@ -748,6 +751,10 @@ footer {
     gap: 20px;
   }
 
+  label {
+    display: none;
+  }
+
   .icons-nav {
     display: flex;
     gap: 10px;
@@ -767,9 +774,6 @@ footer {
     flex-wrap: wrap;
   }
 
-  .jacket-container > * {
-  }
-
   .jacket-container1 h1 {
     margin: 20px;
   }
@@ -785,10 +789,6 @@ footer {
   .products-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-  }
-
-  label {
-    display: none;
   }
 
   main img {
