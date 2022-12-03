@@ -1,5 +1,5 @@
 export default function handleCart() {
-  const products = document.querySelector("#1");
+  const products = document.querySelectorAll("#products button");
 
   products.forEach((product) => product.addEvenetListener("click", handleCartToggle));
 }
