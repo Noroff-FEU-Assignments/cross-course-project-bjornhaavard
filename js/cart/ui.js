@@ -1,7 +1,11 @@
-export default function handleCart() {
-  const products = document.querySelectorAll("#products button");
+import toggleItemInCart from "./methods.js";
 
-  products.forEach((product) => product.addEvenetListener("click", handleCartToggle));
+export default function handleCart() {
+  const cartButton = document.querySelector('[data-cart="true"');
+  if (cartButton) {
+    cartButton.addEventListener("click", handleCartToggle);
+  }
+  //   products.forEach((product) => product.addEvenetListener("click", handleCartToggle));
 }
 
 function handleCartToggle(event) {
