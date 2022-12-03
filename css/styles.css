@@ -538,6 +538,7 @@ footer {
   font-family: "Montserrat", tahoma, sans-serif;
   background-color: var(--header-color);
   text-align: center;
+  margin-top: 25vh;
 }
 
 .contact-us {
