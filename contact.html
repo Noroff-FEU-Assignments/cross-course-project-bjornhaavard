@@ -43,7 +43,7 @@
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <nav>
         <div class="nav-menu">
-          <form action="/cta-response/search.html" method="get" class="box">
+          <form action="/cta-response/search.html" method="get" id="contact-form" class="box">
             <input aria-label="search" type="text" id="search-bar" name="search-bar" />
             <button class="fas-fa-search" aria-label="search"><i class="fas fa-search"></i></button>
           </form>
@@ -84,19 +84,25 @@
             <p>contact us in this form and we will</p>
             <p>get back to you as soon as possible</p>
           </div>
+          <div id="messageSent"></div>
           <div class="contact-form">
-            <form action="/cta-response/contact-successful.html" method="get">
+            <form id="contact-form" method="get">
               <div>
                 <label for="name"></label>
+                <div class="form-error" id="fullNameError">Please enter your full name (minimum 6 characters)</div>
               </div>
               <div>
                 <input type="name" placeholder="your name" id="name" name="name" />
                 <label for="email"></label>
+                <div class="form-error">Please enter a valid email address</div>
               </div>
-              <input type="email" placeholder="email address" id="email" name="email" />
+              <div>
+                <input type="email" placeholder="email address" id="email" name="email" />
+              </div>
               <label for="textarea"></label>
+              <div class="form-error">Please enter a minimum of 5 letters</div>
               <textarea aria-label="text area" name="text" id="text" cols="30" rows="10"></textarea>
-              <button class="cta-submit">submit</button>
+              <button class="cta-submit" id="submit">submit</button>
             </form>
           </div>
         </div>

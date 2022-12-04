@@ -1,4 +1,5 @@
 import toggleItemInCart from "./methods.js";
+const button = document.querySelector("button");
 
 export default function handleCart() {
   const cartButton = document.querySelector('[data-cart="true"');
