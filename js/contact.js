@@ -1,4 +1,4 @@
-const form = document.querySelector("#contact-form");
+const form = document.querySelector("#contactForm");
 const fullName = document.querySelector("#name");
 const fullNameError = document.querySelector("#fullNameError");
 const email = document.querySelector("#email");
@@ -21,21 +21,22 @@ function validateInput(event) {
     emailError.style.display = "block";
   }
   if (checkValue(textArea.value, 5)) {
-    textArea.style.display = "none";
+    textError.style.display = "none";
   } else {
-    textArea.style.display = "block";
+    textError.style.display = "block";
   }
 }
 
 if (checkValue(fullName.value, 4) && validateEmail(email.value) && checkValue(textArea.value, 5)) {
-  messageSent.innerHTML = `<div id="messageSent"> Message sent </div>`;
+  messageSent.innerHTML = `<div id="messageSent"> Message successsfully sent </div>`;
   messageSent.style.display = "block";
   form.reset();
 }
 
 form.addEventListener("submit", validateInput);
 
-console.log(button, validateInput);
+console.log("submit")
+console.log(messageSent);
 
 function checkValue(value, char) {
   if (value.trim().length >= char) {
