@@ -1,12 +1,16 @@
 import toggleItemInCart from "./methods.js";
-const button = document.querySelector("button");
 
-export default function handleCart() {
+const button = document.querySelector("button");
+const intoCart = document.querySelector("#intoCart");
+
+export default function handleCart(handleCartToggle, item) {
   const cartButton = document.querySelector('[data-cart="true"');
   if (cartButton) {
     cartButton.addEventListener("click", handleCartToggle);
   }
-  //   products.forEach((product) => product.addEvenetListener("click", handleCartToggle));
+  intoCart.innerHTML += `<div id="#intoCart">${item}</div>`;
+
+  console.log(item);
 }
 
 function handleCartToggle(event) {
@@ -16,5 +20,5 @@ function handleCartToggle(event) {
 
   console.log(item);
 
-  toggleItemInCart(item);
+  toggleItemInCart(item, handleCart);
 }

@@ -25,18 +25,18 @@ function validateInput(event) {
   } else {
     textError.style.display = "block";
   }
-}
 
-if (checkValue(fullName.value, 4) && validateEmail(email.value) && checkValue(textArea.value, 5)) {
-  messageSent.innerHTML = `<div id="messageSent"> Message successsfully sent </div>`;
-  messageSent.style.display = "block";
-  form.reset();
+  if (checkValue(fullName.value, 4) && validateEmail(email.value) && checkValue(textArea.value, 5)) {
+    messageSent.innerHTML = `<div id="messageSent"> Message successsfully sent </div>`;
+    messageSent.style.display = "block";
+    form.reset();
+  }
 }
 
 form.addEventListener("submit", validateInput);
 
-console.log("submit")
-console.log(messageSent);
+// console.log("submit")
+// console.log(messageSent);
 
 function checkValue(value, char) {
   if (value.trim().length >= char) {
