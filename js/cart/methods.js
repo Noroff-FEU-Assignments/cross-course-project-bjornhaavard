@@ -8,6 +8,6 @@ export default function toggleItemInCart(item) {
   }
 }
 
-function itemIsInCart(id) {
+export function itemIsInCart(id) {
   return getCart().some((item) => item.id === id);
 }

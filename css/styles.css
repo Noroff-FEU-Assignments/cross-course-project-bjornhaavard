@@ -254,7 +254,6 @@ form {
 .select-size {
   padding: 10px;
   font-size: 1rem;
-  
 }
 
 .icons-nav img {
@@ -345,6 +344,16 @@ h3 {
 }
 
 /* Shopping cart */
+
+.cart-shop {
+  display: flex;
+  background-color: var(--header-color);
+  padding: 19px;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-size: 1.3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .shopping-cart-text {
   text-align: center;
@@ -519,6 +528,10 @@ textarea {
   margin: 10px 0px 10px 0px;
 }
 
+.cta-submit:before {
+  content: "add to cart";
+}
+
 .cta-submit {
   display: inline-block;
   background-color: var(--yellow);
@@ -533,6 +546,14 @@ textarea {
   cursor: pointer;
   border: 0px;
   margin-bottom: 20px;
+}
+
+.cta-submit.in-cart {
+  background-color: #687e8c;
+}
+
+.cta-submit.in-cart:before {
+  content: "Remove from cart";
 }
 
 .cta-register {
@@ -651,6 +672,18 @@ footer {
     width: 400px;
     height: 100%;
     flex-direction: column;
+  }
+
+  .cart-shop {
+    display: flex;
+    background-color: var(--header-color);
+    padding: 19px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .nav-media {
@@ -862,14 +895,6 @@ footer {
     height: auto;
     width: 267px;
     padding: 0px;
-  }
-
-  .cart-shop {
-    display: flex;
-    background-color: var(--header-color);
-    padding: 19px;
-    flex-wrap: wrap;
-    gap: 40px;
   }
 
   /* checkout */

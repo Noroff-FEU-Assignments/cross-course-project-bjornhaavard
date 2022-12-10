@@ -1,0 +1,23 @@
+{
+  "name": "cross-course-project-bjornhaavard",
+  "version": "0.0.1",
+  "description": "Rainy days project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noroff-FEU-Assignments/cross-course-project-bjornhaavard.git"
+  },
+  "keywords": [
+    "rainydays",
+    "cross-course"
+  ],
+  "author": "Bjørn Håvard Steinnes <bjornhaavard@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noroff-FEU-Assignments/cross-course-project-bjornhaavard/issues"
+  },
+  "homepage": "https://github.com/Noroff-FEU-Assignments/cross-course-project-bjornhaavard#readme"
+}

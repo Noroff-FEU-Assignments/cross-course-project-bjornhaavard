@@ -1,3 +1,3 @@
-import handleCart from "./cart/ui.js";
+import handleCartButton from "./cart/ui.js";
 
-handleCart();
+handleCartButton();
