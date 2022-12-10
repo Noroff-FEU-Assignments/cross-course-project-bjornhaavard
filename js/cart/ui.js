@@ -53,12 +53,12 @@ export function renderCart() {
   cartContainer.innerHTML = "";
 
   cartItems.forEach((item) => {
-    cartContainer.innerHTML += `<div>   
+    cartContainer.innerHTML += `<div class="inTheCart">   
                                     <p>Product: ${item.name}</p>
                                     <p>Size: ${item.size}</p>
                                     <p>Color: ${item.color}</p>
                                     <p>Price $: ${item.price}</p>
-                                    
+                                    <img class="cart-portrait" src="/images/men/pexels-andrew-resize.jpg"</img>
                                     <button data-id="${item.id}"class="remove-from-cart">Remove</button>
                                 </div>`;
   });

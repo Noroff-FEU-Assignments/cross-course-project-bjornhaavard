@@ -368,6 +368,14 @@ h3 {
   position: relative;
 }
 
+/* .inTheCart {
+} */
+
+.cart-portrait {
+  width: 150px;
+  margin-bottom: 2rem;
+}
+
 .cart-amount {
   background-color: #9c3e12;
   position: absolute;
