@@ -705,6 +705,12 @@ footer {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 
+  .cart-amount {
+    right: 4px;
+
+    bottom: 30px;
+  }
+
   .nav-media {
     margin: 20px;
   }
