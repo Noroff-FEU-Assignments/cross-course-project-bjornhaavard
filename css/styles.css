@@ -542,7 +542,8 @@ textarea {
   content: "add to cart";
 }
 
-.cta-submit {
+.cta-submit,
+.remove-from-cart {
   display: inline-block;
   background-color: var(--yellow);
   padding: 10px 50px;

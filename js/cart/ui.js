@@ -1,8 +1,12 @@
 import toggleItemInCart, { itemIsInCart } from "./methods.js";
-import { getCart } from "../storage/cart.js";
+import { getCart, removeFromCart } from "../storage/cart.js";
 
 export default function handleCartButton() {
-  const button = document.querySelector("#warmRaincoatButton");
+  const button = document.querySelector("#cartButton");
+
+  if (!button) {
+    return;
+  }
 
   const { id } = button.dataset;
 
@@ -27,23 +31,24 @@ function handleCartToggle(event) {
   const button = event.target;
   button.classList.toggle("in-cart");
 
-  const { name, size, color, price } = event.target.dataset;
+  const { id, name, size, color, price } = event.target.dataset;
 
-  const item = { name, size, color, price };
+  const item = { id, name, size, color, price };
 
   console.log(item);
 
   toggleItemInCart(item);
+  displayCartTotal();
 }
 
 export function renderCart() {
   const cartItems = getCart();
 
-  if (cartItems.length === 0) {
-    return;
-  }
-
   const cartContainer = document.querySelector("#intoCart");
+
+  if (cartItems.length === 0) {
+    return (cartContainer.innerHTML = "The cart is empty");
+  }
 
   cartContainer.innerHTML = "";
 
@@ -53,6 +58,39 @@ export function renderCart() {
                                     <p>Size: ${item.size}</p>
                                     <p>Color: ${item.color}</p>
                                     <p>Price $: ${item.price}</p>
+                                    
+                                    <button data-id="${item.id}"class="remove-from-cart">Remove</button>
                                 </div>`;
   });
+
+  handleCartButtons();
+}
+
+function handleCartButtons() {
+  const buttons = document.querySelectorAll("button.remove-from-cart");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", handleRemoveFromCart);
+  });
+}
+
+function handleRemoveFromCart(event) {
+  console.log(event.target);
+  const { id } = event.target.dataset;
+
+  removeFromCart(id);
+  displayCartTotal();
+  renderCart();
+}
+
+export function displayCartTotal() {
+  const totalContainer = document.querySelector("#cartAmount");
+
+  if (!totalContainer) {
+    return;
+  }
+
+  const cartItems = getCart();
+
+  totalContainer.innerHTML = cartItems.length;
 }
