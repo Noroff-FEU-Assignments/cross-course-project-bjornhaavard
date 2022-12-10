@@ -48,7 +48,7 @@ export function renderCart() {
   cartContainer.innerHTML = "";
 
   cartItems.forEach((item) => {
-    cartContainer.innerHTML += `<div>
+    cartContainer.innerHTML += `<div>   
                                     <p>Product: ${item.name}</p>
                                     <p>Size: ${item.size}</p>
                                     <p>Color: ${item.color}</p>

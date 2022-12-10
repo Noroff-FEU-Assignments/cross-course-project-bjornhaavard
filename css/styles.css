@@ -364,6 +364,20 @@ h3 {
   display: flex;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart-amount {
+  background-color: #9c3e12;
+  position: absolute;
+  border-radius: 1px;
+  right: -7px;
+  padding: 2px;
+  bottom: 16px;
+  /* display: none; */
+}
+
 .counter {
   display: flex;
   justify-content: center;
@@ -403,10 +417,6 @@ h3 {
 .checkout-button {
   margin: 20px 0px -20px 0px;
 }
-
-/* #checkout-cta {
-  margin-bottom: -20px;
-} */
 
 .checkout {
   display: inline-block;
