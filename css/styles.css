@@ -558,7 +558,6 @@ textarea {
   cursor: pointer;
   border: 0px;
   margin-bottom: 20px;
-  box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cta-submit:before {
