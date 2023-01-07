@@ -141,14 +141,18 @@ p::first-letter {
 
 /* navigation */
 
+i {
+  cursor: pointer;
+}
+
 nav {
   background-color: var(--header-color);
   display: none;
   z-index: 1000;
   width: 60%;
   right: 0px;
-  top: 86px;
-  height: 90vh;
+  top: 67px;
+  height: 70vh;
 }
 
 nav a {
@@ -157,20 +161,28 @@ nav a {
   margin: 0px;
 }
 
-.nav-menu {
+.nav-menu,
+.nav-menu a {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 0px;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: center;
+  /* width: 100%; */
+  gap: 40px;
+  color: #202020;
+  background-color: var(--yellow);
+  padding: 0.7rem;
 }
 
 .header-bar {
   background-color: #0a3641;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  top: 0;
+  position: sticky;
+  z-index: 100;
 }
 
 /* about-us */
@@ -256,9 +268,13 @@ form {
   font-size: 1rem;
 }
 
-.icons-nav img {
-  width: 22px;
+select {
+  padding: 10px;
 }
+
+/* .icons-nav img {
+  width: 22px;
+} */
 
 .jacket-specific {
   flex: 1;
@@ -311,6 +327,7 @@ img a {
 #hamburger-menu {
   display: none;
   align-items: end;
+  cursor: pointer;
 }
 
 .logo {
@@ -475,6 +492,7 @@ textarea {
   border-radius: 10px;
   margin: 20px auto;
   padding: 10px;
+  width: 250px;
   border: none;
 }
 
@@ -534,17 +552,6 @@ textarea {
 /* Buttons */
 
 .cta {
-  /* font-family: "Montserrat", tahoma, sans-serif;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #0a3641;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 10px;
-  text-transform: capitalize;
-  margin: 10px 0px 10px 0px;
-  padding: 10px 50px; */
   display: inline-block;
   background-color: var(--yellow);
   padding: 10px 50px;
@@ -558,6 +565,20 @@ textarea {
   cursor: pointer;
   border: 0px;
   margin-bottom: 20px;
+}
+
+.cta-products {
+  font-family: "Montserrat", tahoma, sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0a3641;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  text-transform: capitalize;
+  margin: 10px 0px 10px 0px;
+  /* padding: 10px 50px; */
 }
 
 .cta-submit:before {
@@ -738,6 +759,8 @@ footer {
 
   .nav-menu {
     gap: 20px;
+    background-color: var(--yellow);
+    /* padding: 2rem; */
   }
 
   #hamburger-menu {
@@ -788,14 +811,19 @@ footer {
 @media (min-width: 736px) {
   /* before */
 
+  #logoRainyDays {
+    width: 280px;
+  }
+
   .before {
     display: flex;
     background-image: url(/images/pexels-kirill-lazarev-8573474-resized.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    margin-top: 0;
     height: 20vh;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: "Tahoma", "Segoe UI", Verdana, sans-serif, Verdana, sans-serif;
     font-weight: bold;
     justify-content: space-between;
@@ -811,6 +839,7 @@ footer {
   .before p {
     margin-right: 70px;
     text-transform: capitalize;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.5);
   }
 
   /* navigation */
@@ -821,8 +850,9 @@ footer {
     position: relative;
     height: 30px;
     top: 0px;
-    text-align: center;
-    margin-top: 0px;
+    justify-content: inherit;
+    /* text-align: center;
+    margin-top: 0px; */
   }
 
   nav a {
@@ -839,17 +869,17 @@ footer {
     background-color: var(--header-color);
   }
 
-  #search-bar {
+  /* #search-bar {
     padding: 5px;
-  }
+  } */
 
-  .nav-menu {
+  /* .nav-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
     gap: 20px;
-  }
+  } */
 
   label {
     display: none;
@@ -857,8 +887,9 @@ footer {
 
   .icons-nav {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     align-items: flex-end;
+    font-size: 1.3rem;
   }
 
   /* Products*/

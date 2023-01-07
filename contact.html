@@ -29,10 +29,6 @@
     </script>
   </head>
   <body>
-    <div class="before">
-      <figure><img src="/images/mobile/logo/Logo-Desktop.png" alt="rainydays logo" /></figure>
-      <p>pushing the comfort zone</p>
-    </div>
     <header class="header-bar">
       <figure class="logo">
         <a href="/index.html">
@@ -42,35 +38,45 @@
       <input type="checkbox" id="hamburger-menu" />
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <nav>
-        <div class="nav-menu">
-          <form action="/cta-response/search.html" method="get" id="contact-form" class="box">
-            <input aria-label="search" type="text" id="search-bar" name="search-bar" />
-            <button class="fas-fa-search" aria-label="search"><i class="fas fa-search"></i></button>
-          </form>
-          <a href="/products/men/men.html" class="men">Men</a>
-          <a href="/products/women/women.html" class="women">Women</a>
-          <a href="/products/kids/kids.html" class="kids">Kids</a>
-        </div>
-        <div class="icons-nav">
-          <figure class="favorite">
-            <a href="#">
-              <img src="images/Icon-favorite-border.png" alt="favorite" />
-            </a>
-          </figure>
-          <figure class="cart">
-            <a href="/products/cart.html">
-              <img src="images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
-            </a>
-          </figure>
-          <figure class="person">
-            <a href="#">
-              <img src="images/Icon-material-person-outline.png" alt="person" />
-            </a>
-          </figure>
+        <form action="/cta-response/search.html" method="get" class="box">
+          <input aria-label="search" type="text" id="search-bar" placeholder="search" name="search-bar" />
+          <button class="fas-fa-search" aria-label="search"><i class="fas fa-search"></i></button>
+        </form>
+        <div>
+          <div class="icons-nav">
+            <figure class="favorite">
+              <a href="#">
+                <img src="/images/Icon-favorite-border.png" alt="favorite" />
+                <!-- <i class="far fa-heart" aria-hidden="true"></i> -->
+              </a>
+            </figure>
+            <figure class="cart">
+              <a href="/products/cart.html">
+                <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" />
+                <!-- <i class="fas fa-shopping-cart" aria-hidden="true"></i> -->
+                <div class="cart-amount" id="cartAmount">0</div>
+              </a>
+            </figure>
+            <figure class="person">
+              <a href="#">
+                <img src="/images/Icon-material-person-outline.png" alt="login" />
+                <!-- <i class="far fa-user" aria-hidden="true"></i> -->
+              </a>
+            </figure>
+          </div>
         </div>
       </nav>
     </header>
+    <div class="before"> 
+      <figure><a href="/index.html"><img src="/images/mobile/logo/Logo-Desktop.png" alt="rainydays logo" /></figure></a>
+      <p>pushing the comfort zone</p>   
+  </div>
     <main>
+      <div class="nav-menu">
+        <a href="/products/men/men.html" class="men active">Men</a>
+        <a href="/products/women/women.html" class="women">Women</a>
+        <a href="/products/kids/kids.html" class="kids">Kids</a>
+      </div>
       <section class="welcome">
         <div class="welcome-text">
           <h1>Quality jackets so you can enjoy the outdoors</h1>

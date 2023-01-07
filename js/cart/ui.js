@@ -60,6 +60,7 @@ export function renderCart() {
                                     <p>Price $: ${item.price}</p>
                                     <img class="cart-portrait" src="/images/men/pexels-andrew-resize.jpg"</img>
                                     <button data-id="${item.id}"class="remove-from-cart">Remove</button>
+                                    <button class="cta" OnClick="location.href='/cta-response/checkout.html' ">checkout</button>
                                 </div>`;
   });
 
