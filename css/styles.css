@@ -534,7 +534,7 @@ textarea {
 /* Buttons */
 
 .cta {
-  font-family: "Montserrat", tahoma, sans-serif;
+  /* font-family: "Montserrat", tahoma, sans-serif;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -544,6 +544,21 @@ textarea {
   padding: 0px 10px;
   text-transform: capitalize;
   margin: 10px 0px 10px 0px;
+  padding: 10px 50px; */
+  display: inline-block;
+  background-color: var(--yellow);
+  padding: 10px 50px;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  align-items: flex-end;
+  cursor: pointer;
+  border: 0px;
+  margin-bottom: 20px;
+  box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cta-submit:before {
@@ -665,9 +680,10 @@ footer {
 
 .register-form {
   background-color: var(--header-color);
-  padding: 20px;
+  padding: 50px;
   max-width: 400px;
-  margin: auto;
+  margin: 30px auto;
+  border-radius: 10px;
 }
 
 .register-column {

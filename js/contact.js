@@ -25,13 +25,16 @@ function validateInput(event) {
   } else {
     textError.style.display = "block";
   }
+
+  if (checkValue(fullName.value, 4) && validateEmail(email.value) && checkValue(textArea.value, 5)) {
+    messageSent.innerHTML = `<div id="messageSent"> Message successfully sent </div>`;
+    messageSent.style.display = "block";
+    form.reset();
+  }
   setTimeout(() => {
-    if (checkValue(fullName.value, 4) && validateEmail(email.value) && checkValue(textArea.value, 5)) {
-      messageSent.innerHTML = `<div id="messageSent"> Message successsfully sent </div>`;
-      messageSent.style.display = "block";
-      form.reset();
-    }
-  }, 1000);
+    // messageSent.style.display = "none";
+    document.location.href = "/index.html";
+  }, 3000);
 }
 
 form.addEventListener("submit", validateInput);
