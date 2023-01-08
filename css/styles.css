@@ -588,7 +588,7 @@ textarea {
 
 .cta-submit,
 .remove-from-cart {
-  display: flex;
+  display: inline;
   background-color: var(--yellow);
   padding: 10px 60px;
   font-size: 17px;

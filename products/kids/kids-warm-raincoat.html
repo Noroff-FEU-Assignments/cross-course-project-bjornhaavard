@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Quality jackets so you can enjoy the outdoors" />
-    <title>RainyDays | Home</title>
+    <title>RainyDays | Warm Raincoat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for https://kind-wilson-46a5f7.netlify.app/ -->
     <script>
@@ -71,44 +71,54 @@
       <figure><a href="/index.html"><img src="/images/mobile/logo/Logo-Desktop.png" alt="rainydays logo" /></figure></a>
       <p>pushing the comfort zone</p>   
   </div>
-    <main>
-      <div class="nav-menu">
-        <a href="/products/men/men.html" class="men active">Men</a>
-        <a href="/products/women/women.html" class="women">Women</a>
-        <a href="/products/kids/kids.html" class="kids">Kids</a>
-      </div>
-      <section class="welcome">
-        <div class="welcome-text">
-          <h1>Quality jackets so you can enjoy the outdoors</h1>
+  <div class="nav-menu">
+    <a href="/products/men/men.html" class="men active">Men</a>
+    <a href="/products/women/women.html" class="women">Women</a>
+    <a href="/products/kids/kids.html" class="kids">Kids</a>
+  </div>
+    <main class="jacket-container">
+      <section class="jacket-container1">
+        <figure>
+          <img src="/images/mobile/pexels-alex-9974540kids_resized.jpg" alt="girl holding yellow leaves in her hands smiling" class="jacket-image" />
+        </figure>
+        <div class="text-box">
+          <h1>warm raincoat</h1>
+          <p>a slightly warmer raincoat</p>
+          <p>for all year use down to -5c</p>
+          <p>299$</p>
+          <form method="post" class="product-form">
+            <div class="form-size">
+              <label for="cities">Size</label>
+              <select class="select-size "name="size" id="size">
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+                <option value="x-large">x-large</option>
+              </select>
+            </div>
+            <div class="form-color">
+              <label for="color">Color</label>
+              <select class="select-size  name="color" id="color">
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="orange">orange</option>
+                <option value="green">green</option>
+              </select>
+            </div>
+          </form>
+          <button id="cartButton" data-img="/images/mobile/pexels-alex-9974540kids_resized.jpg"  data-cart="true" data-id="10" data-name="Warm Raincoat" data-size="Small" data-color="Red" data-price="299" class="cta-submit"></button>
         </div>
       </section>
-      <h2>our jackets</h2>
-      <div class="products-container">
-        <div class="products">
-          <a href="products/men/men.html">
-            <figure>
-              <img src="images/men/pexels-andrew-nevins-resize.jpg" alt="man riding a snowboard down a snowcovered hill with trees around" />
-            </figure>
-            <p class="picture-name">shop men</p>
-          </a>
+      <section class="jacket-container2">
+        <div class="jacket-img-thumbnail">
+          <figure>
+            <img src="/images/mobile/pexels-alex-9974540kids_resized.jpg" alt="girl holding yellow leaves in her hands smiling" class="jacket-image" />
+          </figure>
+          <figure>
+            <img src="/images/mobile/pexels-alex-9974540kids_resized.jpg" alt="girl holding yellow leaves in her hands smiling" class="jacket-image" />
+          </figure>
         </div>
-        <div class="products">
-          <a href="products/women/women.html">
-            <figure>
-              <img src="images/women/pexels-andrew-nevins-resized.jpg" alt="Woman standing on rock in lake watching the mountains in the distance" />
-            </figure>
-            <p class="picture-name">shop women</p>
-          </a>
-        </div>
-        <div class="products">
-          <a href="products/kids/kids.html">
-            <figure>
-              <img src="images/mobile/pexels-alex-9974540kids_resized.jpg" alt="child looking at the sunset behind a old wooden fence with a yellow jacket on" />
-            </figure>
-            <p class="picture-name">shop kids</p>
-          </a>
-        </div>
-      </div>
+      </section>
     </main>
     <footer>
       <p class="footer-text">Interested in joining us pushing the comfort zone?</p>
@@ -116,19 +126,19 @@
         <div><a href="/cta-response/register.html" class="cta-register">register</a></div>
       </div>
       <div class="nav-media">
-        <a href="https://www.facebook.com/"><img src="/images/mobile/logo/Icon-awesome-facebook-f.png" alt="facebook" /></a>
+        <a href="#"><img src="/images/mobile/logo/Icon-awesome-facebook-f.png" alt="facebook" /></a>
         <a href="#"><img src="/images/mobile/logo/Icon-awesome-instagram.png" alt="instagram" /></a>
         <a href="#"><img src="/images/mobile/logo/Component34-6.png" alt="youtube" /></a>
       </div>
       <div class="contact-about">
         <div class="contact-us">
-          <a href="contact.html">contact us</a>
+          <a href="/contact.html">contact us</a>
         </div>
         <div class="about-us">
-          <a href="about.html">about us</a>
+          <a href="/about.html">about us</a>
         </div>
       </div>
     </footer>
-    <script defer type="module" src="js/index.js"></script>
+    <script defer type="module" src="/js/index.js"></script>
   </body>
 </html>
