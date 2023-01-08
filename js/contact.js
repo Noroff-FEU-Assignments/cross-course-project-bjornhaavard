@@ -34,7 +34,7 @@ function validateInput(event) {
   setTimeout(() => {
     // messageSent.style.display = "none";
     document.location.href = "/index.html";
-  }, 3000);
+  }, 5000);
 }
 
 form.addEventListener("submit", validateInput);

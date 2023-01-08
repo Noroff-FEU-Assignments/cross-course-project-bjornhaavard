@@ -172,6 +172,7 @@ nav a {
   color: #202020;
   background-color: var(--yellow);
   padding: 0.7rem;
+  font-size: 1.2rem;
 }
 
 .header-bar {
