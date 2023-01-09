@@ -2,6 +2,8 @@ import toggleItemInCart, { itemIsInCart } from "./methods.js";
 import { getCart, removeFromCart } from "../storage/cart.js";
 import { products } from "../products/products.js";
 
+const totalContainer = document.querySelector(".totalPrice")
+
 console.log(products)
 
 export default function handleCartButton() {
@@ -46,6 +48,7 @@ function handleCartToggle(event) {
 
 export function renderCart() {
   const cartItems = getCart();
+  let total = 0;
 
   const cartContainer = document.querySelector("#intoCart");
 
@@ -56,6 +59,7 @@ export function renderCart() {
   cartContainer.innerHTML = "";
 
   cartItems.forEach((item) => {
+    total += item.price
     cartContainer.innerHTML += `<div class="inTheCart">   
                                     <p>Product: ${item.name}</p>
                                     <p>Size: ${item.size}</p>
@@ -66,7 +70,8 @@ export function renderCart() {
                                     <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">checkout</button>
                                 </div>`;
   });
-
+  totalContainer.innerHTML = `Total: ${total}`
+  
   handleCartButtons();
 }
 
@@ -96,5 +101,8 @@ export function displayCartTotal() {
 
   const cartItems = getCart();
 
+  
+
   totalContainer.innerHTML = cartItems.length;
+  
 }

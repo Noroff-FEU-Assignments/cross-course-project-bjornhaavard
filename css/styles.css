@@ -646,6 +646,16 @@ textarea {
   transition: all 0.5s ease-out;
 }
 
+.totalPrice {
+  font-size: 1rem;
+  background-color: #0a3641;
+  color: #fff;
+  text-align: right;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 .button-general {
   display: flex;
   background-color: var(--yellow);
@@ -768,6 +778,8 @@ footer {
     height: 100%;
     flex-direction: column;
   }
+
+ 
 
   .cart-shop {
     display: grid;
