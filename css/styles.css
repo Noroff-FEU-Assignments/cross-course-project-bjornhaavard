@@ -646,6 +646,22 @@ textarea {
   transition: all 0.5s ease-out;
 }
 
+.button-general {
+  display: flex;
+  background-color: var(--yellow);
+  padding: 10px 60px;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  align-items: flex-end;
+  cursor: pointer;
+  border: 0px;
+  margin-bottom: 20px;
+}
+
 .back {
   display: flex;
   margin-top: 20px;
@@ -754,7 +770,8 @@ footer {
   }
 
   .cart-shop {
-    display: flex;
+    display: grid;
+    grid-template-areas: 1fr, auto;
     background-color: var(--header-color);
     padding: 19px;
     flex-wrap: wrap;

@@ -62,7 +62,7 @@ export function renderCart() {
                                     <p>Color: ${item.color}</p>
                                     <p>Price $: ${item.price}</p>
                                     <img class="cart-portrait" src="/images/men/pexels-andrew-resize.jpg"</img>
-                                    <button data-id="${item.id}"class="remove-from-cart">Remove</button>
+                                    <button id="remove "data-id="${item.id}"class="button-general">Remove</button>
                                     <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">checkout</button>
                                 </div>`;
   });
@@ -71,7 +71,7 @@ export function renderCart() {
 }
 
 function handleCartButtons() {
-  const buttons = document.querySelectorAll("button.remove-from-cart");
+  const buttons = document.querySelectorAll("button, #remove");
 
   buttons.forEach(function (button) {
     button.addEventListener("click", handleRemoveFromCart);
