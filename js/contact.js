@@ -28,7 +28,7 @@ function validateInput(event) {
 
   if (checkValue(fullName.value, 4) && validateEmail(email.value) && checkValue(textArea.value, 5)) {
     messageSent.innerHTML = `<div id="messageSent"> Message successfully sent </div>
-                              <p>You will be redirected to the homepage in 5 seconds</p>`;
+                              <p>You will be redirected to the homepage</p>`;
     messageSent.style.display = "block";
     form.reset();
   }

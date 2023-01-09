@@ -586,6 +586,23 @@ textarea {
   content: "add to cart";
 }
 
+.cta-checkout {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color: #068a27;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  /* text-transform: capitalize; */
+  /* margin: 10px 0px 10px 0px; */
+  cursor: pointer;
+  border: 0;
+}
+
+
 .cta-submit,
 .remove-from-cart {
   display: inline;

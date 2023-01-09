@@ -1,5 +1,8 @@
 import toggleItemInCart, { itemIsInCart } from "./methods.js";
 import { getCart, removeFromCart } from "../storage/cart.js";
+import { products } from "../products/products.js";
+
+console.log(products)
 
 export default function handleCartButton() {
   const button = document.querySelector("#cartButton");
@@ -60,7 +63,7 @@ export function renderCart() {
                                     <p>Price $: ${item.price}</p>
                                     <img class="cart-portrait" src="/images/men/pexels-andrew-resize.jpg"</img>
                                     <button data-id="${item.id}"class="remove-from-cart">Remove</button>
-                                    <button class="cta" OnClick="location.href='/cta-response/checkout.html' ">checkout</button>
+                                    <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">checkout</button>
                                 </div>`;
   });
 
