@@ -602,7 +602,6 @@ textarea {
   border: 0;
 }
 
-
 .cta-submit,
 .remove-from-cart {
   display: inline;
@@ -683,7 +682,7 @@ footer {
   font-family: "Montserrat", tahoma, sans-serif;
   background-color: var(--header-color);
   text-align: center;
-  margin-top: 25vh;
+  margin-top: 45vh;
 }
 
 .contact-us {
@@ -778,8 +777,6 @@ footer {
     height: 100%;
     flex-direction: column;
   }
-
- 
 
   .cart-shop {
     display: grid;
