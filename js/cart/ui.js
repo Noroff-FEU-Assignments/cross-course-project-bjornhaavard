@@ -1,6 +1,6 @@
 import toggleItemInCart, { itemIsInCart } from "./methods.js";
 import { getCart, removeFromCart } from "../storage/cart.js";
-import { products } from "../products/products.js";
+import { products } from "../data/products.js";
 
 const totalContainer = document.querySelector(".totalPrice");
 
