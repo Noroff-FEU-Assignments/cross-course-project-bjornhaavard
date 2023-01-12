@@ -16,6 +16,7 @@ function router() {
       return;
 
     case "/products/men/product-warm-raincoat.html":
+      // displayProductList(products);
       handleCartButton();
       return;
     case "/products/cart.html":

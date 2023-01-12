@@ -47,20 +47,6 @@ function handleCartToggle(event) {
   displayCartTotal();
 }
 
-// const container = document.querySelector("#intoCart");
-
-// products.forEach(function (product) {
-//   container.innerHTML += `<div class="inTheCart">
-//                           <p>Product: ${product.name}</p>
-//                           <p>Size: ${product.size}</p>
-//                           <p>Color: ${product.color}</p>
-//                           <p>Price $: ${product.price}</p>
-//                           <img class="cart-portrait" src="/images/men/pexels-andrew-resize.jpg"</img>
-//                           <button id="remove "data-id="${product.id}"class="button-general">Remove</button>
-//                           <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">checkout</button>
-//                           </div>`;
-// });
-
 export function renderCart() {
   const cartItems = getCart();
   let total = 0;
@@ -77,19 +63,28 @@ export function renderCart() {
     total += parseInt(item.price);
     console.log(typeof total);
 
-    cartContainer.innerHTML += `<div class="inTheCart">   
+    cartContainer.innerHTML += `<div class="inTheCart"> 
+                                <div> 
                                     <p>Product: ${item.name}</p>
                                     <p>Size: ${item.size}</p>
                                     <p>Color: ${item.color}</p>
                                     <p>Price $: ${item.price}</p>
-                                    <img class="cart-portrait" src="/images/men/pexels-andrew-resize.jpg"</img>
+                                    <img class="cart-portrait"${item.img}</img>
                                     <button id="remove "data-id="${item.id}"class="button-general">Remove</button>
-                                    <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">checkout</button>
-                                </div>`;
+                                    
+                                 </div> 
+                                 
+                                 <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">
+                                   checkout
+                                 </button>
+                               
+                                    </div>`;
+
+    console.log(item.img);
   });
 
   totalContainer.innerHTML = `Total: ${total}`;
-  displayProductList();
+  // displayProductList();
   handleCartButtons();
 }
 
