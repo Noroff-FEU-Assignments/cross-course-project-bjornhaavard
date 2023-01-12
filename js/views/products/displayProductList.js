@@ -1,7 +1,8 @@
-export default function displayProductList(products = [], container = "#intoCart") {
+export default function displayProductList(products = [], container = "#testContainer") {
   const parentElement = document.querySelector(container);
 
   products.forEach((product) => {
+    let total = 0;
     total += parseInt(product.price);
     console.log(typeof total);
 

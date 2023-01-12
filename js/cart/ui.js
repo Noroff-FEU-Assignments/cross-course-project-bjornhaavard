@@ -1,6 +1,7 @@
 import toggleItemInCart, { itemIsInCart } from "./methods.js";
 import { getCart, removeFromCart } from "../storage/cart.js";
 import { products } from "../data/products.js";
+import displayProductList from "../views/products/displayProductList.js";
 
 const totalContainer = document.querySelector(".totalPrice");
 
@@ -88,7 +89,7 @@ export function renderCart() {
   });
 
   totalContainer.innerHTML = `Total: ${total}`;
-
+  displayProductList();
   handleCartButtons();
 }
 
