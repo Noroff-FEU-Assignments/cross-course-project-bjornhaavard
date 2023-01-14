@@ -74,16 +74,22 @@ export function renderCart() {
                                     
                                  </div> 
                                  
-                                 <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">
-                                   checkout
-                                 </button>
+                                 
                                
                                     </div>`;
 
     console.log(item.img);
   });
 
-  totalContainer.innerHTML = `Total: ${total}`;
+  totalContainer.innerHTML = `<div>
+                                 <div>
+                                 <button class="cta-checkout" OnClick="location.href='/cta-response/checkout.html' ">
+                                   purchase
+                                 </button>
+                                 </div>
+                                 <div class="totalContainer">Total: ${total}</div>
+                                </div>`;
+
   // displayProductList();
   handleCartButtons();
 }

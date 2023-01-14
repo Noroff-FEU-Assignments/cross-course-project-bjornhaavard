@@ -645,6 +645,10 @@ textarea {
   transition: all 0.5s ease-out;
 }
 
+.totalContainer {
+  padding: 1rem;
+}
+
 .totalPrice {
   font-size: 1rem;
   background-color: #0a3641;
@@ -652,7 +656,7 @@ textarea {
   text-align: right;
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
 }
 
 .button-general {
