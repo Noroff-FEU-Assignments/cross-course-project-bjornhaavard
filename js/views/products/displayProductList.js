@@ -7,7 +7,7 @@ export default function displayProductList(products = [], container = "#products
     parentElement.innerHTML += `<div class="products" id="productsContainer"> 
                                         <figure>
                                         <a href="/products/details.html?id=${id}">
-                                        <img src="/images/men/pexels-andrew-resize.jpg"/>
+                                        <img src="${product.img}"/>
                                         <div class="product-grid">
                                         <div class="cta-products"> </div>
                                             <p>Product: ${product.name}</p>
