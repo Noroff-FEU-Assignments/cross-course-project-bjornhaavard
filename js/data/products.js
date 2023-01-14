@@ -72,8 +72,8 @@ export const products = [
   },
   {
     id: 8,
-    price: 199,
-    name: "Women raincoat",
+    price: 299,
+    name: "Women warm raincoat",
     size: "medium",
     color: "blue",
     img: "/images/women/pexels-andrew-nevins-resized.jpg",
@@ -82,8 +82,8 @@ export const products = [
   },
   {
     id: 9,
-    price: 199,
-    name: "Women raincoat",
+    price: 499,
+    name: "Women special raincoat",
     size: "medium",
     color: "blue",
     img: "/images/women/pexels-andrew-nevins-resized.jpg",

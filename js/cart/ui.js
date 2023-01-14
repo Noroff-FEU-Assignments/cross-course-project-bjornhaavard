@@ -54,6 +54,7 @@ export function renderCart() {
   const cartContainer = document.querySelector("#intoCart");
 
   if (cartItems.length === 0) {
+    totalContainer.style.display = "none";
     return (cartContainer.innerHTML = "The cart is empty");
   }
 
@@ -65,18 +66,22 @@ export function renderCart() {
 
     cartContainer.innerHTML += `<div class="inTheCart"> 
                                 <div> 
+                                <div>
                                     <p>Product: ${item.name}</p>
+                                    </div>
+                                    <div>
                                     <p>Size: ${item.size}</p>
+                                    </div>
+                                    <div>
                                     <p>Color: ${item.color}</p>
+                                    </div>
+                                    <div>
                                     <p>Price $: ${item.price}</p>
+                                    </div>
                                     <img src="${item.img}" alt="${item.name}" class="cart-portrait"/>
                                     <button id="remove "data-id="${item.id}"class="button-general">Remove</button>
-                                    
-                                 </div> 
-                                 
-                                 
-                               
-                                    </div>`;
+                                    </div> 
+                                  </div>`;
 
     console.log(item.img);
   });
@@ -87,7 +92,7 @@ export function renderCart() {
                                    purchase
                                  </button>
                                  </div>
-                                 <div class="totalContainer">Total: ${total}</div>
+                                 <div id="total" class="totalContainer">Total: $${total}</div>
                                 </div>`;
 
   // displayProductList();

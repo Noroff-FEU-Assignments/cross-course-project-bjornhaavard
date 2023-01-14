@@ -386,8 +386,9 @@ h3 {
   position: relative;
 }
 
-/* .inTheCart {
-} */
+.inTheCart {
+  display: flex;
+}
 
 .cart-portrait {
   width: 150px;
@@ -1009,8 +1010,7 @@ footer {
   }
 
   .cart-container {
-    display: flex;
-
+    /* display: flex; */
     justify-content: center;
     gap: 50px;
     margin: 20px;
