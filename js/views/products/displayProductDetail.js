@@ -11,13 +11,13 @@ export default function displayProductDetail(container = "#detailsContainer") {
   parentElement.innerHTML += `<main class="jacket-container">
   <section class="jacket-container1">
     <figure>
-      <img src="/images/men/pexels-andrew-nevins-resize.jpg" alt="man snowboarding in a snowcovered forrest" class="jacket-image" />
+      <img src="${img}" alt="${name}" class="jacket-image" />
     </figure>
     <div class="text-box">
-      <h1>warm raincoat</h1>
+      <h1>${name}</h1>
       <p>a slightly warmer raincoat</p>
       <p>for all year use down to -5c</p>
-      <p>299$</p>
+      <p>$ ${price}</p>
       <form method="post" class="product-form">
         <div class="form-size">
           <label for="cities">Size</label>
@@ -38,19 +38,10 @@ export default function displayProductDetail(container = "#detailsContainer") {
           </select>
         </div>
       </form>
-      <button id="cartButton" data-img="/images/men/pexels-andrew-nevins-resize.jpg"  data-cart="true" data-id="11" data-name="Warm Raincoat" data-size="Large" data-color="Red" data-price="299" class="cta-submit"></button>
+      <button id="cartButton" data-img="${img}"  data-cart="true" data-id="11" data-name="Warm Raincoat" data-size="Large" data-color="Red" data-price="299" class="cta-submit"></button>
     </div>
   </section>
-  <section class="jacket-container2">
-    <div class="jacket-img-thumbnail">
-      <figure>
-        <img src="/images/men/pexels-andrew-resize.jpg" alt="man snowboarding in a snowcovered forrest" class="jacket-image" />
-      </figure>
-      <figure>
-        <img src="/images/men/pexels-tyler-tornberg-resize.jpg" alt="man jumping on a snowboard" class="jacket-image" />
-      </figure>
-    </div>
-  </section>
+  
 </main>
                               </div>`;
 }
