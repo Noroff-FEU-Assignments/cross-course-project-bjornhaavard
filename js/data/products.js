@@ -7,6 +7,7 @@ export const products = [
     color: "red",
     img: "/images/men/pexels-andrew-nevins-resize.jpg",
     category: "men",
+    description: "A slightly warmer raincoat",
   },
 
   {

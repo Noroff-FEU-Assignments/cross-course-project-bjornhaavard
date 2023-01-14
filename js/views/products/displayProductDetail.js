@@ -6,7 +6,7 @@ export default function displayProductDetail(container = "#detailsContainer") {
   const productId = getIdFromQueryString();
   const product = getProductById(products, productId);
 
-  const { id, name, size, color, price, img } = product;
+  const { id, name, description, size, color, price, img } = product;
 
   parentElement.innerHTML += `<main class="jacket-container">
   <section class="jacket-container1">
@@ -15,7 +15,7 @@ export default function displayProductDetail(container = "#detailsContainer") {
     </figure>
     <div class="text-box">
       <h1>${name}</h1>
-      <p>a slightly warmer raincoat</p>
+      <p>${description}</p>
       <p>for all year use down to -5c</p>
       <p>$ ${price}</p>
       <form method="post" class="product-form">
@@ -38,7 +38,7 @@ export default function displayProductDetail(container = "#detailsContainer") {
           </select>
         </div>
       </form>
-      <button id="cartButton" data-img="${img}"  data-cart="true" data-id="11" data-name="Warm Raincoat" data-size="Large" data-color="Red" data-price="299" class="cta-submit"></button>
+      <button id="cartButton" data-img="${img}"  data-cart="true" data-id="${id}" data-name="${name}" data-size="${size}" data-color="${color}" data-price="${price}" class="cta-submit"></button>
     </div>
   </section>
   
