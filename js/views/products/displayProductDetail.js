@@ -16,7 +16,6 @@ export default function displayProductDetail(container = "#detailsContainer") {
                                         <div class="text-box">
                                         <h1>${name}</h1>
                                         <p>${description}</p>
-                                        
                                         <p>$ ${price}</p>
                                         <form method="post" class="product-form">
                                             <div class="form-size">

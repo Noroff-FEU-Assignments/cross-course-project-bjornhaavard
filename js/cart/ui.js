@@ -67,7 +67,7 @@ export function renderCart() {
     cartContainer.innerHTML += `<div class="inTheCart"> 
                                 <div> 
                                 <div>
-                                    <p>Product: ${item.name}</p>
+                                    <p> ${item.name}</p>
                                     </div>
                                     <div>
                                     <p>Size: ${item.size}</p>
@@ -82,8 +82,6 @@ export function renderCart() {
                                     <button id="remove "data-id="${item.id}"class="button-general">Remove</button>
                                     </div> 
                                   </div>`;
-
-    console.log(item.img);
   });
 
   totalContainer.innerHTML = `<div>
