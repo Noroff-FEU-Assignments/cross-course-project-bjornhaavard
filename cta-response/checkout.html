@@ -12,16 +12,21 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for https://kind-wilson-46a5f7.netlify.app/ -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3252912,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3252912, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
   </head>
   <body>
     <header class="header-bar">
@@ -46,7 +51,7 @@
             </figure>
             <figure class="cart">
               <a href="/products/cart.html">
-                <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" aria-label="shopping cart"/>
+                <img src="/images/mobile/logo/Icon-feather-shopping-cart.png" alt="shopping cart" aria-label="shopping cart" />
                 <div class="cart-amount" id="cartAmount">0</div>
               </a>
             </figure>
@@ -59,53 +64,53 @@
         </div>
       </nav>
     </header>
-    <div class="before"> 
+    <div class="before">
       <figure>
         <a href="/index.html"><img src="/images/mobile/logo/Logo-Desktop.png" alt="rainydays logo" aria-label="home" /></a>
       </figure>
-      <p>pushing the comfort zone</p>   
-  </div>
-      <div class="nav-menu">
-        <a href="/products/men/men.html" class="men active" aria-label="mens page">Men</a>
-        <a href="/products/women/women.html" class="women" aria-label="womens page">Women</a>
-        <a href="/products/kids/kids.html" class="kids" aria-label="kids page">Kids</a>
-      </div>
+      <p>pushing the comfort zone</p>
+    </div>
+    <div class="nav-menu">
+      <a href="/products/men/men.html" class="men active" aria-label="mens page">Men</a>
+      <a href="/products/women/women.html" class="women" aria-label="womens page">Women</a>
+      <a href="/products/kids/kids.html" class="kids" aria-label="kids page">Kids</a>
+    </div>
     <main>
       <h1>checkout</h1>
       <div class="shop-cart">
-      <section class="checkout">
-        <div class="checkout-text">
+        <section class="checkout">
+          <div class="checkout-text">
             <h2>shipping method</h2>
             <form method="get" class="shipping-cont">
-                <label for="shipping"></label>
-               <div class="form-checkout">
+              <label for="shipping"></label>
+              <div class="form-checkout">
                 <select name="shipping" id="shipping">
                   <option value="spar">spar ål</option>
                   <option value="mailbox">mailbox</option>
                   <option value="pick-up">pick up point</option>
                 </select>
               </div>
-              </div>
-              </form>
-            <h3>payment</h3>
-            <form action="/cta-response/purchase-succesful.html" method="get" class="payment-cont">
-                <label for="payment"></label>
-               <div class="form-checkout">
-                <select name="payment" id="payment">
-                  <option value="visa">visa</option>
-                  <option value="mastercard">mastercard</option>
-                  <option value="debit">debit</option>
-                </select>
-              </div>
-                <div class="checkout-button">
-                <button class="cta">purchase</button>
-                </div>
-                <div>
-                <input type="button" value="back" onclick="history.back()" class="cta" id="checkout-cta"/>
+            </form>
+          </div>
+          <h3>payment</h3>
+          <form action="/cta-response/purchase-succesful.html" method="get" class="payment-cont">
+            <label for="payment"></label>
+            <div class="form-checkout">
+              <select name="payment" id="payment">
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+                <option value="debit">debit</option>
+              </select>
             </div>
-              </form>
-      </section>
-    </div>
+            <div class="checkout-button">
+              <button class="cta">purchase</button>
+            </div>
+            <div>
+              <input type="button" value="back" onclick="history.back()" class="cta" id="checkout-cta" />
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
     <footer>
       <p class="footer-text">Interested in joining us pushing the comfort zone?</p>
@@ -129,4 +134,3 @@
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>
-
