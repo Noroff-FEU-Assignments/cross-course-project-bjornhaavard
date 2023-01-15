@@ -10,8 +10,8 @@ export default function displayProductList(products = [], container = "#products
                                         <img src="${product.img}"/>
                                         <div class="product-grid">
                                         <div class="cta-products"> </div>
-                                            <p>Product: ${product.name}</p>
-                                            <p>Price $: ${product.price}</p>
+                                            <p>${product.name}</p>
+                                            <p>$: ${product.price}</p>
                                         </div>
                                         </figure>  
                                        </a>

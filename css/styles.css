@@ -948,6 +948,8 @@ footer {
 
   .jacket-container1 {
     flex: 1 1 460px;
+    max-width: 500px;
+    margin: auto;
   }
 
   .jacket-container2 {
