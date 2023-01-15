@@ -40,7 +40,6 @@ export default function displayProductDetail(container = "#detailsContainer") {
                                         <button id="cartButton" data-img="${img}"  data-cart="true" data-id="${id}" data-name="${name}" data-size="${size}" data-color="${color}" data-price="${price}" class="cta-submit"></button>
                                         </div>
                                     </section>
-  
                                 </main>
                               </div>`;
 }
