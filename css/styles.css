@@ -595,10 +595,9 @@ textarea {
   display: flex;
   justify-content: space-between;
   padding: 10px 50px;
-  /* text-transform: capitalize; */
-  /* margin: 10px 0px 10px 0px; */
+  color: #fff;
   cursor: pointer;
-  border: 0;
+  border: solid 2px white;
 }
 
 .cta-submit,

@@ -11,7 +11,7 @@ export default function displayProductList(products = [], container = "#products
                                         <div class="product-grid">
                                         <div class="cta-products"> </div>
                                             <p>${product.name}</p>
-                                            <p>$: ${product.price}</p>
+                                            <p>$ ${product.price}</p>
                                         </div>
                                         </figure>  
                                        </a>
