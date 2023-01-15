@@ -1017,10 +1017,10 @@ footer {
   /* checkout */
 
   .checkout {
-    display: flex;
+    /* display: flex; */
     background-color: var(--header-color);
     margin: 20px auto;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 40px;
     padding: 19px;
   }
