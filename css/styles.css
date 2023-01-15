@@ -371,6 +371,10 @@ h3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.cart-shop::content {
+  border: solid 3px white;
+}
+
 .shopping-cart-text {
   text-align: center;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
