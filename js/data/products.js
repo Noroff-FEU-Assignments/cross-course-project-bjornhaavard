@@ -91,3 +91,29 @@ export const products = [
     description: "A very special raincoat",
   },
 ];
+
+// const product = document.querySelector(".api");
+const api_url = "https://bjornhaavard.no/rainydays-api/wp-json/wc/store/products";
+
+export async function getApi() {
+  try {
+    const getUrl = await fetch(api_url);
+
+    const apiProducts = await getUrl.json();
+
+    // apiResult.forEach((products) => {
+    //   product.innerHTML += `<div>
+    //                         <h2>${products.name}</h2>
+    //                         <p>${products.description}</p>
+    //                         <div class=".image" style="background-img:url('${products.images[0].src}')"></div>
+    //                         <img class="image" src="${products.images[0].src}" alt="${products.description}"/>
+    //                         </div>`;
+    // });
+
+    console.log(apiProducts);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getApi();

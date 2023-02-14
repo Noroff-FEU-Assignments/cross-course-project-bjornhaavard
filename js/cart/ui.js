@@ -1,11 +1,13 @@
 import toggleItemInCart, { itemIsInCart } from "./methods.js";
 import { getCart, removeFromCart } from "../storage/cart.js";
 import { products } from "../data/products.js";
+import { getApi } from "../data/products.js";
 import displayProductList from "../views/products/displayProductList.js";
 
 const totalContainer = document.querySelector(".totalPrice");
 
 console.log(products);
+// console.log(apiProducts);
 
 export default function handleCartButton() {
   const button = document.querySelector("#cartButton");
