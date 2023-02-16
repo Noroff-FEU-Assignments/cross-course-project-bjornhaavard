@@ -1,3 +1,6 @@
+// import { displayCartTotal } from "../cart/ui";
+// import displayProductList from "../views/products/displayProductList";
+
 export const products = [
   {
     id: 1,
@@ -95,11 +98,11 @@ export const products = [
 // const product = document.querySelector(".api");
 const api_url = "https://bjornhaavard.no/rainydays-api/wp-json/wc/store/products";
 
-export async function getApi() {
+export async function getProducts() {
   try {
-    const getUrl = await fetch(api_url);
+    const response = await fetch(api_url);
 
-    const apiProducts = await getUrl.json();
+    const products = await response.json();
 
     // apiResult.forEach((products) => {
     //   product.innerHTML += `<div>
@@ -110,10 +113,11 @@ export async function getApi() {
     //                         </div>`;
     // });
 
-    console.log(apiProducts);
+    console.log(products);
   } catch (error) {
     console.log(error);
   }
+  // displayProductList();
 }
 
-getApi();
+// getProducts();

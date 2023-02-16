@@ -1,5 +1,6 @@
 import { products } from "../../data/products.js";
-import { getApi } from "../../data/products.js";
+import { getProductDetails } from "../../api/products.js";
+// import { getProducts } from "../../data/products.js";
 
 export default function displayProductDetail(container = "#detailsContainer") {
   const parentElement = document.querySelector(container);
@@ -43,7 +44,7 @@ export default function displayProductDetail(container = "#detailsContainer") {
                                     </section>
                                 </main>
                               </div>`;
-  getApi();
+  getProducts();
 }
 
 function getIdFromQueryString() {

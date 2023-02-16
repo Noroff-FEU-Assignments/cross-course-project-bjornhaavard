@@ -12,20 +12,20 @@ function router() {
 
   switch (pathname) {
     case "/products/kids/kids.html":
-      const filteredKidsProducts = products.filter((k) => k.category === "kids");
-      displayProductList(filteredKidsProducts);
+      // const filteredKidsProducts = products.filter((k) => k.category === "kids");
+      displayProductList(18);
       handleCartButton();
       return;
 
     case "/products/men/men.html":
-      const filteredMenProducts = products.filter((m) => m.category === "men");
-      displayProductList(filteredMenProducts);
+      // const filteredMenProducts = products.filter((m) => m.category === "men");
+      displayProductList(16);
       handleCartButton();
       return;
 
     case "/products/women/women.html":
-      const filteredWomenProducts = products.filter((w) => w.category === "women");
-      displayProductList(filteredWomenProducts);
+      // const filteredWomenProducts = products.filter((w) => w.category === "women");
+      displayProductList(17);
       handleCartButton();
       return;
 
