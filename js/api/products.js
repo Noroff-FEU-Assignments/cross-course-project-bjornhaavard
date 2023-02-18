@@ -1,17 +1,15 @@
-import { baseUrl } from "./constants.js";
+import { baseUrl, productListUrl } from "./constants.js";
 
 export async function getProducts(categoryId) {
-  const url = `${baseUrl}${categoryId}`;
+  const url = `${productListUrl}${categoryId}`;
   const response = await fetch(url);
   const products = await response.json();
-  console.log(products);
   return products;
 }
 
-export async function getProductDetails(detailsId) {
-  const url = `${detailsUrl}${detailsId}`;
+export async function getProductDetails(productId) {
+  const url = `${baseUrl}${productId}`;
   const response = await fetch(url);
   const productDetails = await response.json();
-  console.log(getProductDetails);
   return productDetails;
 }

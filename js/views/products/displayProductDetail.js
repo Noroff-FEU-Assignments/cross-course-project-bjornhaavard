@@ -1,24 +1,28 @@
-import { products } from "../../data/products.js";
+// import { products } from "../../data/products.js";
 import { getProductDetails } from "../../api/products.js";
 // import { getProducts } from "../../data/products.js";
 
-export default function displayProductDetail(container = "#detailsContainer") {
+export default async function displayProductDetail(container = "#detailsContainer") {
   const parentElement = document.querySelector(container);
 
   const productId = getIdFromQueryString();
-  const product = getProductById(products, productId);
+  // const product = getProductById(products, productId);
+  const product = await getProductDetails(productId);
 
-  const { id, name, description, size, color, price, img } = product;
+  const { id, name, description, size, color, prices, images } = product;
+
+  const image = images[0].src;
+  // const priceValue = prices[0].price;
 
   parentElement.innerHTML += `<main class="jacket-container">
                             <section class="jacket-container1">
                                         <figure>
-                                        <img src="${img}" alt="${name}" class="jacket-image" />
+                                        <img src="${image}" alt="${name}" class="jacket-image" />
                                         </figure>
                                         <div class="text-box">
                                         <h1>${name}</h1>
                                         <p>${description}</p>
-                                        <p>$ ${price}</p>
+                                        <p>$ ${prices}</p>
                                         <form method="post" class="product-form">
                                             <div class="form-size">
                                             <label for="cities">Size</label>
@@ -39,7 +43,7 @@ export default function displayProductDetail(container = "#detailsContainer") {
                                             </select>
                                             </div>
                                         </form>
-                                        <button id="cartButton" data-img="${img}"  data-cart="true" data-id="${id}" data-name="${name}" data-size="${size}" data-color="${color}" data-price="${price}" class="cta-submit"></button>
+                                        <button id="cartButton" data-img="${image}"  data-cart="true" data-id="${id}" data-name="${name}" data-size="${size}" data-color="${color}" data-price="${prices}" class="cta-submit"></button>
                                         </div>
                                     </section>
                                 </main>
