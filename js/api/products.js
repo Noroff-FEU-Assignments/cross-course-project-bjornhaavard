@@ -9,7 +9,7 @@ export async function getProducts(categoryId) {
 }
 
 export async function getProductDetails(detailsId) {
-  const url = `${deatilsUrl}${detailsId}`;
+  const url = `${detailsUrl}${detailsId}`;
   const response = await fetch(url);
   const productDetails = await response.json();
   console.log(getProductDetails);

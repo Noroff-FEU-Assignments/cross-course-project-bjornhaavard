@@ -44,7 +44,7 @@ export default function displayProductDetail(container = "#detailsContainer") {
                                     </section>
                                 </main>
                               </div>`;
-  getProducts();
+  getProductDetails();
 }
 
 function getIdFromQueryString() {
