@@ -1,4 +1,5 @@
 import { getProducts } from "../../api/products.js";
+// import { displayError } from "../../errorMessage/displayError.js";
 
 // export default function displayProductList(products = [], container = "#productsContainer") {
 //   const parentElement = document.querySelector(container);
@@ -28,6 +29,8 @@ export default async function displayProductList(categoryId, container = "#produ
     renderProducts(products, container);
   } catch (error) {
     console.log(error);
+    container = `<div class="error">There was an error: ${error}</div>`;
+    displayError(message, container);
   }
 }
 
@@ -40,15 +43,14 @@ function renderProducts(products, container) {
     parentElement.innerHTML += `<div class="products" id="productsContainer"> 
                                         <figure>
                                         <a href="/products/details.html?id=${id}">
-                                        <img src="${product.img}"/>
+                                        <img src="${product.images[0].src}"/>
                                         <div class="product-grid">
                                         <div class="cta-products"> </div>
-                                            <p>${product.name}</p>
-                                            <p>$ ${product.price}</p>
+                                            <p>${name}</p>                                          
                                         </div>
                                         </figure>  
                                        </a>
                                    </div>`;
-    console.log(product.name);
+    // console.log(product.name);
   });
 }

@@ -1081,3 +1081,15 @@ footer {
     font-size: 1.4rem;
   }
 }
+
+/* Error */
+
+.error {
+  display: block;
+  border: solid 1rem rgb(213, 57, 18);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
