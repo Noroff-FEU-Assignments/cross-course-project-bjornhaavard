@@ -36,7 +36,7 @@ export default async function displayProductList(categoryId, container = "#produ
 
 function renderProducts(products, container) {
   const parentElement = document.querySelector(container);
-
+  console.log(products);
   products.forEach((product) => {
     const { id, name, size, color, price, img } = product;
 

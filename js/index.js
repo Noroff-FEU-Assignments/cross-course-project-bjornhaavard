@@ -2,7 +2,6 @@ import handleCartButton, { displayCartTotal } from "./cart/ui.js";
 import { renderCart } from "./cart/ui.js";
 import displayProductList from "./views/products/displayProductList.js";
 import displayProductDetail from "./views/products/displayProductDetail.js";
-import { products } from "./data/products.js";
 
 function router() {
   const pathname = window.location.pathname;

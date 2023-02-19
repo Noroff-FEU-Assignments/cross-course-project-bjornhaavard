@@ -1,6 +1,4 @@
-// import { products } from "../../data/products.js";
 import { getProductDetails } from "../../api/products.js";
-// import { getProducts } from "../../data/products.js";
 
 export default async function displayProductDetail(container = "#detailsContainer") {
   const parentElement = document.querySelector(container);
@@ -12,17 +10,32 @@ export default async function displayProductDetail(container = "#detailsContaine
   const { id, name, description, size, color, prices, images } = product;
 
   const image = images[0].src;
-  // const priceValue = prices[0].price;
+  const price = parseFloat(prices.price);
+  const priceAmount = price.toLocaleString("en-US", ".");
+  // const newPrice = Intl.NumberFormat("en-US");
+  // const priceValue = newPrice.format(price);
+  // function formatPrice(cents) {
+  //   return (
+  //     (cents / 100).toLocaleString("en-US"),
+  //     {
+  //       style: "currency",
+  //       currency: "USD",
+  //     }
+  //   );
+  // }
+  // formatPrice(price);
+
+  console.log(price.toLocaleString("en-US", "."));
 
   parentElement.innerHTML += `<main class="jacket-container">
-                            <section class="jacket-container1">
+                                     <section class="jacket-container1">
                                         <figure>
                                         <img src="${image}" alt="${name}" class="jacket-image" />
                                         </figure>
                                         <div class="text-box">
                                         <h1>${name}</h1>
                                         <p>${description}</p>
-                                        <p>$ ${prices}</p>
+                                        <p>$ ${priceAmount}</p>
                                         <form method="post" class="product-form">
                                             <div class="form-size">
                                             <label for="cities">Size</label>
@@ -43,11 +56,10 @@ export default async function displayProductDetail(container = "#detailsContaine
                                             </select>
                                             </div>
                                         </form>
-                                        <button id="cartButton" data-img="${image}"  data-cart="true" data-id="${id}" data-name="${name}" data-size="${size}" data-color="${color}" data-price="${prices}" class="cta-submit"></button>
+                                        <button id="cartButton" data-img="${image}"  data-cart="true" data-id="${id}" data-name="${name}" data-size="${size}" data-color="${color}" data-price="${price}" class="cta-submit"></button>
                                         </div>
                                     </section>
-                                </main>
-                              </div>`;
+                                </main>`;
   getProductDetails();
 }
 
