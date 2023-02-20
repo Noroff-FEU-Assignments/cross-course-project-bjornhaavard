@@ -1,4 +1,5 @@
 import { baseUrl, productListUrl } from "./constants.js";
+// import { displayCartTotal } from "../storage/cart.js";
 
 export async function getProducts(categoryId) {
   const url = `${productListUrl}${categoryId}`;
@@ -13,3 +14,4 @@ export async function getProductDetails(productId) {
   const productDetails = await response.json();
   return productDetails;
 }
+

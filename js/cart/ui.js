@@ -1,6 +1,6 @@
 import toggleItemInCart, { itemIsInCart } from "./methods.js";
 import { getCart, removeFromCart } from "../storage/cart.js";
-// import { getProducts } from "../api/products.js";
+import { getProductDetails } from "../api/products.js";
 
 // import displayProductList from "../views/products/displayProductList.js";
 
@@ -39,9 +39,9 @@ function handleCartToggle(event) {
   const button = event.target;
   button.classList.toggle("in-cart");
 
-  const { id, name, size, color, price, img } = event.target.dataset;
+  const { id, name, size, color, prices, images } = event.target.dataset;
 
-  const item = { id, name, size, color, price, img };
+  const item = { id, name, size, color, prices, images };
 
   console.log(item);
 
@@ -80,7 +80,7 @@ export function renderCart() {
                                     <div>
                                     <p>Price $: ${item.price}</p>
                                     </div>
-                                    <img src="${item.img}" alt="${item.name}" class="cart-portrait"/>
+                                    <img src="${item.images}" alt="${item.name}" class="cart-portrait"/>
                                     <button id="remove "data-id="${item.id}"class="button-general">Remove</button>
                                     </div> 
                                   </div>`;
@@ -96,6 +96,7 @@ export function renderCart() {
                                 </div>`;
 
   // displayProductList();
+  getProductDetails();
   handleCartButtons();
 }
 

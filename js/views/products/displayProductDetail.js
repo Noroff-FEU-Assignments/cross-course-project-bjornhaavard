@@ -4,8 +4,10 @@ export default async function displayProductDetail(container = "#detailsContaine
   const parentElement = document.querySelector(container);
 
   const productId = getIdFromQueryString();
+  console.log(productId)
   // const product = getProductById(products, productId);
   const product = await getProductDetails(productId);
+  console.log(product)
 
   const { id, name, description, size, color, prices, images } = product;
 
