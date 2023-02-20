@@ -9,9 +9,9 @@ export async function getProducts(categoryId) {
 }
 
 export async function getProductDetails(productId) {
+  console.log(productId);
   const url = `${baseUrl}${productId}`;
   const response = await fetch(url);
   const productDetails = await response.json();
   return productDetails;
 }
-

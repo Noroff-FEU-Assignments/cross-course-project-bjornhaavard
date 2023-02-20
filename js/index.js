@@ -3,7 +3,7 @@ import { renderCart } from "./cart/ui.js";
 import displayProductList from "./views/products/displayProductList.js";
 import displayProductDetail from "./views/products/displayProductDetail.js";
 
-function router() {
+async function router() {
   const pathname = window.location.pathname;
   console.log(pathname);
 

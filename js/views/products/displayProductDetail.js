@@ -1,31 +1,19 @@
 import { getProductDetails } from "../../api/products.js";
+import handleCartButton from "../../cart/ui.js";
 
 export default async function displayProductDetail(container = "#detailsContainer") {
   const parentElement = document.querySelector(container);
 
   const productId = getIdFromQueryString();
-  console.log(productId)
-  // const product = getProductById(products, productId);
+
   const product = await getProductDetails(productId);
-  console.log(product)
+  // console.log(product);
 
   const { id, name, description, size, color, prices, images } = product;
 
   const image = images[0].src;
   const price = parseFloat(prices.price);
   const priceAmount = price.toLocaleString("en-US", ".");
-  // const newPrice = Intl.NumberFormat("en-US");
-  // const priceValue = newPrice.format(price);
-  // function formatPrice(cents) {
-  //   return (
-  //     (cents / 100).toLocaleString("en-US"),
-  //     {
-  //       style: "currency",
-  //       currency: "USD",
-  //     }
-  //   );
-  // }
-  // formatPrice(price);
 
   console.log(price.toLocaleString("en-US", "."));
 
@@ -62,7 +50,8 @@ export default async function displayProductDetail(container = "#detailsContaine
                                         </div>
                                     </section>
                                 </main>`;
-  getProductDetails();
+  // getProductDetails();
+  handleCartButton();
 }
 
 function getIdFromQueryString() {

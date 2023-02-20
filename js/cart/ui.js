@@ -22,6 +22,7 @@ export default function handleCartButton() {
     button.classList.add("in-cart");
   }
   button.addEventListener("click", handleCartToggle);
+  console.log(button.addEventListener);
 }
 
 // export default function handleCart(item) {
@@ -64,7 +65,7 @@ export function renderCart() {
 
   cartItems.forEach((item) => {
     total += parseInt(item.price);
-    console.log(typeof total);
+    console.log(item);
 
     cartContainer.innerHTML += `<div class="inTheCart"> 
                                 <div> 
@@ -80,7 +81,7 @@ export function renderCart() {
                                     <div>
                                     <p>Price $: ${item.price}</p>
                                     </div>
-                                    <img src="${item.images}" alt="${item.name}" class="cart-portrait"/>
+                                    <img src="${item.img}" alt="${item.name}" class="cart-portrait"/>
                                     <button id="remove "data-id="${item.id}"class="button-general">Remove</button>
                                     </div> 
                                   </div>`;
