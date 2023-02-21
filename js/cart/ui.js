@@ -17,6 +17,7 @@ export default function handleCartButton() {
   }
 
   const { id } = button.dataset;
+  console.log(id);
 
   if (itemIsInCart(id)) {
     button.classList.add("in-cart");
@@ -40,9 +41,9 @@ function handleCartToggle(event) {
   const button = event.target;
   button.classList.toggle("in-cart");
 
-  const { id, name, size, color, prices, images } = event.target.dataset;
+  const { id, name, size, color, price, image } = event.target.dataset;
 
-  const item = { id, name, size, color, prices, images };
+  const item = { id, name, size, color, price, image };
 
   console.log(item);
 
@@ -97,8 +98,9 @@ export function renderCart() {
                                 </div>`;
 
   // displayProductList();
-  getProductDetails();
+  // getProductDetails();
   handleCartButtons();
+  handleCartButton();
 }
 
 function handleCartButtons() {

@@ -30,7 +30,7 @@ async function router() {
 
     case "/products/details.html":
       displayProductDetail();
-      handleCartButton();
+      // handleCartButton();
       return;
 
     case "/products/cart.html":
