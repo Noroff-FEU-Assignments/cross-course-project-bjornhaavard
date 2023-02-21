@@ -41,9 +41,9 @@ function handleCartToggle(event) {
   const button = event.target;
   button.classList.toggle("in-cart");
 
-  const { id, name, size, color, price, image } = event.target.dataset;
+  const { id, name, price, image } = event.target.dataset;
 
-  const item = { id, name, size, color, price, image };
+  const item = { id, name, price, image };
 
   console.log(item);
 
@@ -66,23 +66,18 @@ export function renderCart() {
 
   cartItems.forEach((item) => {
     total += parseInt(item.price);
+    // const price = parseFloat(prices.price);
     console.log(item);
 
     cartContainer.innerHTML += `<div class="inTheCart"> 
                                 <div> 
                                 <div>
                                     <p> ${item.name}</p>
-                                    </div>
-                                    <div>
-                                    <p>Size: ${item.size}</p>
-                                    </div>
-                                    <div>
-                                    <p>Color: ${item.color}</p>
-                                    </div>
+                                    </div>      
                                     <div>
                                     <p>Price $: ${item.price}</p>
                                     </div>
-                                    <img src="${item.img}" alt="${item.name}" class="cart-portrait"/>
+                                    <img src="${item.image}" alt="${item.name}" class="cart-portrait"/>
                                     <button id="remove "data-id="${item.id}"class="button-general">Remove</button>
                                     </div> 
                                   </div>`;

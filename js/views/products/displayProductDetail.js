@@ -9,7 +9,7 @@ export default async function displayProductDetail(container = "#detailsContaine
   const product = await getProductDetails(productId);
   // console.log(product);
 
-  const { id, name, description, size, color, prices, images } = product;
+  const { id, name, description, prices, images } = product;
 
   const image = images[0].src;
   const price = parseFloat(prices.price);
@@ -46,7 +46,7 @@ export default async function displayProductDetail(container = "#detailsContaine
                                             </select>
                                             </div>
                                         </form>
-                                        <button id="cartButton" data-img="${image}"  data-cart="true" data-id="${id}" data-name="${name}" data-size="${size}" data-color="${color}" data-price="${price}" class="cta-submit"></button>
+                                        <button id="cartButton" data-image="${image}"  data-cart="true" data-id="${id}" data-name="${name}"  data-price="${price}" class="cta-submit"></button>
                                         </div>
                                     </section>
                                 </main>`;
