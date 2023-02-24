@@ -15,8 +15,6 @@ export default async function displayProductDetail(container = "#detailsContaine
   const price = parseFloat(prices.price);
   const priceAmount = price.toLocaleString("en-US", ".");
 
-  console.log(price.toLocaleString("en-US", "."));
-
   parentElement.innerHTML += `<main class="jacket-container">
                                      <section class="jacket-container1">
                                         <figure>
