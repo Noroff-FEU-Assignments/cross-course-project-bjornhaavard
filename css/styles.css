@@ -19,6 +19,16 @@
   --black: black;
 }
 
+.error {
+  display: block;
+  border: solid 1rem rgb(213, 57, 18);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 body {
   background: var(--background-color);
   color: white;
@@ -368,6 +378,16 @@ h3 {
   padding: 5px;
   display: flex;
   justify-content: center;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 500px 500px 500px;
+  color: rgb(253, 253, 253);
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 /* Shopping cart */
@@ -1094,13 +1114,3 @@ footer {
 }
 
 /* Error */
-
-.error {
-  display: block;
-  border: solid 1rem rgb(213, 57, 18);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-}

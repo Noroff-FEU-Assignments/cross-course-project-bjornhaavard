@@ -17,8 +17,6 @@ export default async function displayProductDetail(container = "#detailsContaine
   const price = parseFloat(prices.price);
   const priceAmount = price.toLocaleString("en-US", ".");
 
-  let loader = document.querySelector(".lds-hourglass");
-
   parentElement.innerHTML += `<main class="jacket-container">
                                   
                                      <section class="jacket-container1">

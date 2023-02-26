@@ -12,13 +12,11 @@ export default function handleCartButton() {
   }
 
   const { id } = button.dataset;
-  console.log(id);
 
   if (itemIsInCart(id)) {
     button.classList.add("in-cart");
   }
   button.addEventListener("click", handleCartToggle);
-  console.log(button.addEventListener);
 }
 
 function handleCartToggle(event) {
@@ -28,8 +26,6 @@ function handleCartToggle(event) {
   const { id, name, price, image } = event.target.dataset;
 
   const item = { id, name, price, image };
-
-  console.log(item);
 
   toggleItemInCart(item);
   displayCartTotal();
@@ -50,8 +46,6 @@ export function renderCart() {
 
   cartItems.forEach((item) => {
     total += parseInt(item.price);
-
-    console.log(item);
 
     cartContainer.innerHTML += `<div class="inTheCart"> 
                                 <div> 
@@ -89,7 +83,6 @@ function handleCartButtons() {
 }
 
 function handleRemoveFromCart(event) {
-  console.log(event.target);
   const { id } = event.target.dataset;
 
   removeFromCart(id);

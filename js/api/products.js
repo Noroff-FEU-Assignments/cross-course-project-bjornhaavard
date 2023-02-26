@@ -10,13 +10,12 @@ export async function getProducts(categoryId) {
 
 export async function getProductDetails(productId) {
   try {
-    console.log(productId);
     const url = `${baseUrl}${productId}`;
     const response = await fetch(url);
     const productDetails = await response.json();
     return productDetails;
   } catch (error) {
     console.log(error);
-    productsContainer.innerHTML += `<div>test${error}</div>`;
+    detailsContainer.innerHTML = `<div>test${error}</div>`;
   }
 }

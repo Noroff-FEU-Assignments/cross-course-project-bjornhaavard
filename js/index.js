@@ -5,7 +5,6 @@ import displayProductDetail from "./views/products/displayProductDetail.js";
 
 async function router() {
   const pathname = window.location.pathname;
-  console.log(pathname);
 
   displayCartTotal();
 
