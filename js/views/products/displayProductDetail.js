@@ -1,6 +1,8 @@
 import { getProductDetails } from "../../api/products.js";
 import handleCartButton from "../../cart/ui.js";
 
+// Display the html
+
 export default async function displayProductDetail(container = "#detailsContainer") {
   const parentElement = document.querySelector(container);
 
@@ -15,7 +17,10 @@ export default async function displayProductDetail(container = "#detailsContaine
   const price = parseFloat(prices.price);
   const priceAmount = price.toLocaleString("en-US", ".");
 
+  let loader = document.querySelector(".lds-hourglass");
+
   parentElement.innerHTML += `<main class="jacket-container">
+                                  
                                      <section class="jacket-container1">
                                         <figure>
                                         <img src="${image}" alt="${name}" class="jacket-image" />
@@ -24,7 +29,30 @@ export default async function displayProductDetail(container = "#detailsContaine
                                         <h1>${name}</h1>
                                         <p>${description}</p>
                                         <p>$ ${priceAmount}</p>
-                                        <form method="post" class="product-form">
+                                        <button id="cartButton" data-image="${image}"  data-cart="true" data-id="${id}" data-name="${name}"  data-price="${price}" class="cta-submit"></button>
+                                        </div>
+                                    </section>
+                                </main>`;
+
+  // passing the cartButton function into the display html function
+
+  handleCartButton();
+}
+
+// Getting the id from the querystring
+
+function getIdFromQueryString() {
+  const url = new URL(window.location);
+  const searchParams = url.searchParams;
+  return searchParams.get("id");
+}
+
+function getProductById(products, id) {
+  const product = products.find((product) => product.id === Number(id));
+  return product;
+}
+
+/* <form method="post" class="product-form">
                                             <div class="form-size">
                                             <label for="cities">Size</label>
                                             <select class="select-size "name="size" id="size">
@@ -43,22 +71,4 @@ export default async function displayProductDetail(container = "#detailsContaine
                                                 <option value="green">green</option>
                                             </select>
                                             </div>
-                                        </form>
-                                        <button id="cartButton" data-image="${image}"  data-cart="true" data-id="${id}" data-name="${name}"  data-price="${price}" class="cta-submit"></button>
-                                        </div>
-                                    </section>
-                                </main>`;
-  // getProductDetails();
-  handleCartButton();
-}
-
-function getIdFromQueryString() {
-  const url = new URL(window.location);
-  const searchParams = url.searchParams;
-  return searchParams.get("id");
-}
-
-function getProductById(products, id) {
-  const product = products.find((product) => product.id === Number(id));
-  return product;
-}
+                                        </form> */

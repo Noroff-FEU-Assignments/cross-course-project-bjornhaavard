@@ -40,4 +40,3 @@ async function router() {
 }
 
 router();
-// handleCartButton();

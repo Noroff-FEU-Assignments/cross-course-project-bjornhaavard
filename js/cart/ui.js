@@ -2,12 +2,7 @@ import toggleItemInCart, { itemIsInCart } from "./methods.js";
 import { getCart, removeFromCart } from "../storage/cart.js";
 import { getProductDetails } from "../api/products.js";
 
-// import displayProductList from "../views/products/displayProductList.js";
-
 const totalContainer = document.querySelector(".totalPrice");
-
-// console.log(products);
-// console.log(apiProducts);
 
 export default function handleCartButton() {
   const button = document.querySelector("#cartButton");
@@ -25,17 +20,6 @@ export default function handleCartButton() {
   button.addEventListener("click", handleCartToggle);
   console.log(button.addEventListener);
 }
-
-// export default function handleCart(item) {
-//   const cartButton = document.querySelector('[data-cart="true"');
-//   const intoCart = document.querySelector("#intoCart");
-//   if (cartButton) {
-//     cartButton.addEventListener("click", handleCartToggle);
-//   }
-//   intoCart.innerHTML = `<div id="#intoCart">${item}</div>`;
-
-//   console.log(item);
-// }
 
 function handleCartToggle(event) {
   const button = event.target;
@@ -66,7 +50,7 @@ export function renderCart() {
 
   cartItems.forEach((item) => {
     total += parseInt(item.price);
-    // const price = parseFloat(prices.price);
+
     console.log(item);
 
     cartContainer.innerHTML += `<div class="inTheCart"> 
@@ -92,8 +76,6 @@ export function renderCart() {
                                  <div id="total" class="totalContainer">Total: $${total}</div>
                                 </div>`;
 
-  // displayProductList();
-  // getProductDetails();
   handleCartButtons();
   handleCartButton();
 }

@@ -233,8 +233,6 @@ main img {
 
 .products {
   display: flex;
-  /* width: 400px;
-  height: 300px; */
 }
 
 .products p {
@@ -351,6 +349,11 @@ label {
 
 /* Home page */
 
+.featured-style {
+  padding: 10px 50px;
+  margin: 0 auto;
+}
+
 h1,
 h2,
 h3 {
@@ -362,7 +365,6 @@ h3 {
   margin: 0 auto;
   color: #fff;
   background-color: var(--header-color);
-  /* margin-top: 20px; */
   padding: 5px;
   display: flex;
   justify-content: center;

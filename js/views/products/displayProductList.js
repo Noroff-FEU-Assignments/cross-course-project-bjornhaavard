@@ -1,27 +1,7 @@
 import { getProducts } from "../../api/products.js";
-// import { displayError } from "../../errorMessage/displayError.js";
-
-// export default function displayProductList(products = [], container = "#productsContainer") {
-//   const parentElement = document.querySelector(container);
-
-//   products.forEach((product) => {
-//     const { id, name, size, color, price, img } = product;
-
-//     parentElement.innerHTML += `<div class="products" id="productsContainer">
-//                                         <figure>
-//                                         <a href="/products/details.html?id=${id}">
-//                                         <img src="${product.img}"/>
-//                                         <div class="product-grid">
-//                                         <div class="cta-products"> </div>
-//                                             <p>${product.name}</p>
-//                                             <p>$ ${product.price}</p>
-//                                         </div>
-//                                         </figure>
-//                                        </a>
-//                                    </div>`;
-//     console.log(product.name);
-//   });
-// }
+import { baseUrl } from "../../api/constants.js";
+import { getFeatured } from "../../cart/methods.js";
+// const searchButton = document.querySelector("#search-button");
 
 export default async function displayProductList(categoryId, container = "#productsContainer") {
   try {
@@ -42,9 +22,10 @@ function renderProducts(products, container) {
     if (products) {
       loader.style.display = "none";
     }
-    const { id, name, size, color, price, img } = product;
+    const { id, name, prices } = product;
 
     parentElement.innerHTML += `<div class="products" id="productsContainer"> 
+    
                                         <figure>
                                         <a href="/products/details.html?id=${id}">
                                         <div class="product-list">
@@ -53,10 +34,23 @@ function renderProducts(products, container) {
                                         <div class="product-grid">
                                         <div class="cta-products"> </div>
                                             <p>${name}</p>                                          
+                                            <p>$ ${parseInt(prices.price)}</p>                                          
                                         </div>
                                         </figure>  
                                        </a>
                                    </div>`;
+
     // console.log(product.name);
+
+    getFeatured();
+    // console.log(categories);
   });
 }
+
+// searchButton.onclick = function () {
+//   const searchBar = document.querySelector("#search-bar");
+//   console.log(searchBar);
+//   const newUrl = baseUrl + `?search="${searchBar}"`;
+//   container = "";
+//   displayProductList(newUrl);
+// };
