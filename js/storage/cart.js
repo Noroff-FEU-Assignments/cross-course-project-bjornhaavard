@@ -1,3 +1,5 @@
+// Make a variable of something used several times
+
 const CART_KEY = "cart";
 
 export function getCart() {

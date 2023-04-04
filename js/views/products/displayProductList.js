@@ -3,6 +3,7 @@ import { getProducts } from "../../api/products.js";
 export default async function displayProductList(categoryId, container = "#productsContainer") {
   const products = await getProducts(categoryId);
   renderProducts(products, container);
+  console.log(categoryId);
 }
 
 let loader = document.querySelector(".lds-hourglass");
