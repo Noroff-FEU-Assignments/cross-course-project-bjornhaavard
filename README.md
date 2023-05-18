@@ -21,4 +21,8 @@ This website was something I had early in the front end developer course to show
 
 ### Installing
 
+1. Clone the repo:
 
+```bash
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+```
