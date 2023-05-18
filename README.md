@@ -9,7 +9,7 @@ The purpose of this project was firstly to show that we could make a design and 
 
 Built With:
 
-Html
-Css
-JavaScript
+Html,
+Css,
+JavaScript.
 
