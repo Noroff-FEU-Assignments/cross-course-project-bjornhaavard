@@ -24,5 +24,5 @@ This website was something I had early in the front end developer course to show
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-bjornhaavard
 ```
