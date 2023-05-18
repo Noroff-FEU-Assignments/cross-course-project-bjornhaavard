@@ -26,3 +26,10 @@ This website was something I had early in the front end developer course to show
 ```bash
 git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-bjornhaavard
 ```
+## Contact
+
+Here is some of my contact information
+
+[My Instagram_page](https://www.instagram.com/bjornhaavardsteinnes/)
+
+[My LinkedIn page](https://www.linkedin.com/in/bj%C3%B8rn-h%C3%A5vard-steinnes-87333b21a/)
